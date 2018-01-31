@@ -36,11 +36,20 @@ public class MainActivity extends BasicActivity {
 
     private void updateView() {
 
+        // TODO: RecyclerView, mostrare i primi 3 utenti
         List<User> users = User.getAllUsers();
         if (users.size() != 0) {
-            User user = users.get(0);
+            final User user = users.get(0);
             userName.setText(user.getName());
             userPersonalInfo.setText(user.getPersonalInfo());
+            userLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(view.getContext(), ProfileActivity.class);
+                    intent.putExtra(User.EXTRA_USER_ID, user.getId());
+                    startActivity(intent);
+                }
+            });
         }
     }
 
@@ -49,12 +58,6 @@ public class MainActivity extends BasicActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), FriendsListActivity.class));
-            }
-        });
-        userLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(view.getContext(), ProfileActivity.class));
             }
         });
     }

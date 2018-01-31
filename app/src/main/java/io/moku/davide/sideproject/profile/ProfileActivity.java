@@ -31,8 +31,9 @@ public class ProfileActivity extends BasicSecondaryActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.bind(this);
 
-        // fake retrieve user
-        user = User.getAllUsers().get(0);
+        // Retrieve user
+        int userId = getIntent().getIntExtra(User.EXTRA_USER_ID, -1);
+        user = User.getUser(userId);
 
         setListeners();
         updateView();
@@ -42,7 +43,9 @@ public class ProfileActivity extends BasicSecondaryActivity {
         thirdAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(), UserInformationActivity.class));
+                Intent intent = new Intent(view.getContext(), UserInformationActivity.class);
+                intent.putExtra(User.EXTRA_USER_ID, user.getId());
+                startActivity(intent);
             }
         });
     }

@@ -40,8 +40,9 @@ public class UserInformationActivity extends BasicSecondaryActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.bind(this);
 
-        // fake retrieve user
-        user = User.getAllUsers().get(0);
+        // Retrieve user
+        int userId = getIntent().getIntExtra(User.EXTRA_USER_ID, -1);
+        user = User.getUser(userId);
 
         updateView();
     }

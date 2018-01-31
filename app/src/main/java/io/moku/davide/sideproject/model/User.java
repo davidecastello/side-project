@@ -12,6 +12,8 @@ import io.moku.davide.sideproject.utils.realm.RealmUtils;
 import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmObject;
+import io.realm.RealmResults;
+import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
 /**
@@ -21,6 +23,8 @@ import io.realm.annotations.PrimaryKey;
  */
 
 public class User extends RealmObject {
+
+    @Ignore public static final String EXTRA_USER_ID = "extraUserId";
 
     @PrimaryKey private int id;
     private String name;
@@ -82,5 +86,24 @@ public class User extends RealmObject {
             }
         }
         return users;
+    }
+
+    public static User getUser(int userId) {
+        Realm realm = null;
+        User user = null;
+        try {
+            realm = RealmUtils.getCurrentRealm();
+            RealmResults<User> results = realm.where(User.class).equalTo("id", userId).findAll();
+            if (results.size() != 0) {
+                user = results.first();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (realm != null && !realm.isClosed()) {
+                realm.close();
+            }
+        }
+        return user;
     }
 }

@@ -40,13 +40,15 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        User currentUser = users.get(position);
+        final User currentUser = users.get(position);
         holder.name.setText(currentUser.getName());
         holder.personalInfo.setText(currentUser.getPersonalInfo());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                view.getContext().startActivity(new Intent(view.getContext(), ProfileActivity.class));
+                Intent intent = new Intent(view.getContext(), ProfileActivity.class);
+                intent.putExtra(User.EXTRA_USER_ID, currentUser.getId());
+                view.getContext().startActivity(intent);
             }
         });
     }
