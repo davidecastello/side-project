@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.moku.davide.testinglibraries.profile.ProfileActivity">
+
+    <ImageView
+        android:id="@+id/backgroundCover"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/darkerGrey"
+        android:contentDescription="@string/example_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pattern"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        style="@style/line"
+        android:background="@color/darkerGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backgroundCover"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <ImageView
+        android:padding="10dp"
+        android:id="@+id/profilePicture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/boy"
+        android:contentDescription="@string/example_description"
+        android:background="@drawable/cell_background"/>
+
+    <TextView
+        android:id="@+id/userName"
+        style="@style/customTextViewsBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/example_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePicture"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/firstActionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userName"
+        app:layout_constraintEnd_toStartOf="@id/secondActionLayout">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:contentDescription="@string/example_description"
+            android:src="@drawable/ic_person_add"
+            android:clickable="false" />
+
+        <TextView
+            style="@style/customTextViewsLight"
+            android:layout_width="match_parent"
+            android:maxLines="2"
+            android:text="@string/add_to_friends"
+            android:textSize="12sp"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondActionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@+id/firstActionLayout"
+        app:layout_constraintTop_toTopOf="@+id/firstActionLayout"
+        app:layout_constraintEnd_toStartOf="@id/thirdActionLayout">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:contentDescription="@string/example_description"
+            android:src="@drawable/ic_mail"
+            android:clickable="false" />
+
+        <TextView
+            style="@style/customTextViewsLight"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/message"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thirdActionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintStart_toEndOf="@+id/secondActionLayout"
+        app:layout_constraintTop_toTopOf="@+id/secondActionLayout"
+        app:layout_constraintEnd_toStartOf="@id/fourthActionLayout">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:contentDescription="@string/example_description"
+            android:src="@drawable/ic_info"
+            android:clickable="false"/>
+
+        <TextView
+            style="@style/customTextViewsLight"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/info"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fourthActionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/thirdActionLayout"
+        app:layout_constraintTop_toTopOf="@+id/thirdActionLayout">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:contentDescription="@string/example_description"
+            android:src="@drawable/ic_share"
+            android:clickable="false"/>
+
+        <TextView
+            style="@style/customTextViewsLight"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/share"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

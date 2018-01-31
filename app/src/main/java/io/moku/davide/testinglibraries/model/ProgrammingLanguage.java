@@ -1,0 +1,34 @@
+package io.moku.davide.testinglibraries.model;
+
+/**
+ * Created by Davide Castello on 30/01/18.
+ * Project: TestingLibraries
+ * Copyright © 2018 Moku S.r.l. All rights reserved.
+ */
+
+public class ProgrammingLanguage {
+
+    private int id;
+    private String name;
+
+    public ProgrammingLanguage(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}

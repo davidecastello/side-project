@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">FacciaLibro</string>
+    <string name="example_name">Gianni Gaggianni</string>
+    <string name="example_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.</string>
+    <string name="my_friends">I miei amici</string>
+    <string name="pager_number_picker_dialog_title">Number of Pages in RecyclerView/View Pager</string>
+    <string name="pager_number_picker_dialog_positive_text">Save</string>
+    <string name="pager_number_picker_dialog_negative_text">Cancel</string>
+    <string name="see_more">Vedi tutti</string>
+    <string name="profile">Profilo</string>
+    <string name="add_to_friends">Aggiungi agli amici</string>
+    <string name="message">Messaggio</string>
+    <string name="info">Informazioni</string>
+    <string name="share">Condividi</string>
+    <string name="personal_info">Informazioni personali</string>
+    <string name="programmingLanguages">Linguaggi più usati</string>
+    <string name="example_language_1">Java</string>
+    <string name="example_language_2">C++</string>
+    <string name="example_language_3">Python</string>
+    <string name="example_language_4">Scala</string>
+    <string name="example_percentage_1">30%</string>
+    <string name="example_percentage_2">@string/example_percentage_1</string>
+    <string name="example_percentage_3">@string/example_percentage_1</string>
+    <string name="example_percentage_4">10%</string>
+    <string name="percentage_format">%d%%</string>
+</resources>
