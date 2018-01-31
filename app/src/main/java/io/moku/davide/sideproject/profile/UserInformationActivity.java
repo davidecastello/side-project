@@ -41,7 +41,7 @@ public class UserInformationActivity extends BasicSecondaryActivity {
         ButterKnife.bind(this);
 
         // fake retrieve user
-        user = User.getUsers(this).get(0);
+        user = User.getAllUsers().get(0);
 
         updateView();
     }

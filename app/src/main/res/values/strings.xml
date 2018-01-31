@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FacciaLibro</string>
     <string name="example_name">Gianni Gaggianni</string>
-    <string name="example_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.</string>
+    <string name="example_personalInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.</string>
     <string name="my_friends">I miei amici</string>
     <string name="pager_number_picker_dialog_title">Number of Pages in RecyclerView/View Pager</string>
     <string name="pager_number_picker_dialog_positive_text">Save</string>

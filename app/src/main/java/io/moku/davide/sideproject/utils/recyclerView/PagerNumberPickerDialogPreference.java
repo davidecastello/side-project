@@ -32,7 +32,7 @@ public class PagerNumberPickerDialogPreference extends DialogFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MAX_PAGES = User.getUsers(getActivity()).size();
+        MAX_PAGES = User.getAllUsers().size();
         preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
     }
 

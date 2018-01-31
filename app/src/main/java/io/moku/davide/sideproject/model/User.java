@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import io.moku.davide.sideproject.R;
+import io.moku.davide.sideproject.utils.realm.RealmUtils;
+import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
@@ -65,11 +67,19 @@ public class User extends RealmObject {
         this.usedProgrammingLanguages = usedProgrammingLanguages;
     }
 
-    public static List<User> getUsers(Context context) {
-        int USERS_COUNT = 10;
+    public static List<User> getAllUsers() {
+
+        Realm realm = null;
         List<User> users = new ArrayList<>();
-        for (int i = 0; i < USERS_COUNT; ++i) {
-            users.add(new User(i, context.getString(R.string.example_name), context.getString(R.string.example_description), new RealmList<UsedProgrammingLanguage>()));
+        try {
+            realm = RealmUtils.getCurrentRealm();
+            users = realm.where(User.class).findAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (realm != null && !realm.isClosed()) {
+                realm.close();
+            }
         }
         return users;
     }

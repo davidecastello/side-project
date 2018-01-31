@@ -18,5 +18,13 @@ public class MyApplication extends Application {
 
         RealmUtils.initialize(this);
         RealmUtils.loadDB(getApplicationContext());
+        RealmUtils.onCreateApplication();
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+
+        RealmUtils.onTerminateApplication();
     }
 }

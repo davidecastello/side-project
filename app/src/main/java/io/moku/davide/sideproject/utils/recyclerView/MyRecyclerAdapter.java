@@ -42,7 +42,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     public void onBindViewHolder(MyViewHolder holder, int position) {
         User currentUser = users.get(position);
         holder.name.setText(currentUser.getName());
-        holder.description.setText(currentUser.getPersonalInfo());
+        holder.personalInfo.setText(currentUser.getPersonalInfo());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,7 +59,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     static class MyViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.name2) TextView name;
-        @BindView(R.id.description2) TextView description;
+        @BindView(R.id.personalInfo2) TextView personalInfo;
         @BindView(R.id.imageView2) ImageView imageView;
 
         public MyViewHolder(View itemView) {

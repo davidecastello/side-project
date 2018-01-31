@@ -43,6 +43,16 @@ public class RealmUtils {
         return Realm.getInstance(currentConfiguration);
     }
 
+    public static void onCreateApplication() {
+        getCurrentRealm();
+    }
+
+    public static void onTerminateApplication() {
+        Realm realm = getCurrentRealm();
+        if (!realm.isClosed()) realm.close();
+        if (!realm.isClosed()) realm.close();
+    }
+
     public static void loadDB(Context context) {
         Gson gson = new GsonBuilder()
                 .registerTypeAdapter(userToken, new UserTypeAdapter())

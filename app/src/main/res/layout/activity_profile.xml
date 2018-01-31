@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:background="@color/darkerGrey"
-        android:contentDescription="@string/example_description"
+        android:contentDescription="@string/example_personalInfo"
         android:scaleType="centerCrop"
         android:src="@drawable/pattern"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/boy"
-        android:contentDescription="@string/example_description"
+        android:contentDescription="@string/example_personalInfo"
         android:background="@drawable/cell_background"/>
 
     <TextView
@@ -72,7 +72,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@null"
-            android:contentDescription="@string/example_description"
+            android:contentDescription="@string/example_personalInfo"
             android:src="@drawable/ic_person_add"
             android:clickable="false" />
 
@@ -102,7 +102,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@null"
-            android:contentDescription="@string/example_description"
+            android:contentDescription="@string/example_personalInfo"
             android:src="@drawable/ic_mail"
             android:clickable="false" />
 
@@ -132,7 +132,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@null"
-            android:contentDescription="@string/example_description"
+            android:contentDescription="@string/example_personalInfo"
             android:src="@drawable/ic_info"
             android:clickable="false"/>
 
@@ -163,7 +163,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@null"
-            android:contentDescription="@string/example_description"
+            android:contentDescription="@string/example_personalInfo"
             android:src="@drawable/ic_share"
             android:clickable="false"/>
 
