@@ -13,6 +13,7 @@ import io.moku.davide.sideproject.utils.activity.BasicActivity;
 
 public class MainActivity extends BasicActivity {
 
+    public static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.user_layout) RelativeLayout userLayout;
     @BindView(R.id.seeAll) RelativeLayout seeAllLayout;
 

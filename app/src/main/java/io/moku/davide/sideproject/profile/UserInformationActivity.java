@@ -48,7 +48,7 @@ public class UserInformationActivity extends BasicSecondaryActivity {
 
     private void updateView() {
         // Personal info
-        personalInfo.setText(user.getDescription());
+        personalInfo.setText(user.getPersonalInfo());
 
         // Programming languages
         ConstraintSet set = new ConstraintSet();

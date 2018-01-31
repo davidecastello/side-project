@@ -42,7 +42,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.My
     public void onBindViewHolder(MyViewHolder holder, int position) {
         User currentUser = users.get(position);
         holder.name.setText(currentUser.getName());
-        holder.description.setText(currentUser.getDescription());
+        holder.description.setText(currentUser.getPersonalInfo());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

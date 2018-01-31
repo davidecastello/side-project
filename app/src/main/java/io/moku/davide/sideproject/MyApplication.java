@@ -2,6 +2,8 @@ package io.moku.davide.sideproject;
 
 import android.app.Application;
 
+import io.moku.davide.sideproject.utils.realm.RealmUtils;
+
 /**
  * Created by Davide Castello on 30/01/18.
  * Project: TestingLibraries
@@ -14,6 +16,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        /*RealmUtils.initialize(this);*/
+        RealmUtils.initialize(this);
+        RealmUtils.loadDB(getApplicationContext());
     }
 }

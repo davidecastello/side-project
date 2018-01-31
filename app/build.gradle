@@ -42,8 +42,8 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile 'com.ryanjeffreybrooks:indefinitepagerindicator:1.0.4'
 
-    // realm
-    /*compile 'io.realm:realm-android-library:4.3.3'*/
+    // Gson
+    compile 'com.google.code.gson:gson:2.6.1'
 }
 repositories {
     mavenCentral()

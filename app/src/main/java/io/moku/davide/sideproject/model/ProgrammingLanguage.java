@@ -1,16 +1,21 @@
 package io.moku.davide.sideproject.model;
 
+import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
+
 /**
  * Created by Davide Castello on 30/01/18.
  * Project: TestingLibraries
  * Copyright © 2018 Moku S.r.l. All rights reserved.
  */
 
-public class ProgrammingLanguage {
+public class ProgrammingLanguage extends RealmObject {
 
+    @PrimaryKey
     private int id;
     private String name;
 
+    public ProgrammingLanguage() {}
     public ProgrammingLanguage(int id, String name) {
         this.id = id;
         this.name = name;
