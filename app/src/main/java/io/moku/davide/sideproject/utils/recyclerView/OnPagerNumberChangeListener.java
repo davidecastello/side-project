@@ -1,4 +1,4 @@
-package io.moku.davide.testinglibraries.utils.recyclerView;
+package io.moku.davide.sideproject.utils.recyclerView;
 
 /**
  * Created by Davide Castello on 29/01/18.

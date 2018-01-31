@@ -1,4 +1,4 @@
-package io.moku.davide.testinglibraries.utils.recyclerView;
+package io.moku.davide.sideproject.utils.recyclerView;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,9 +13,9 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.moku.davide.testinglibraries.profile.ProfileActivity;
-import io.moku.davide.testinglibraries.R;
-import io.moku.davide.testinglibraries.model.User;
+import io.moku.davide.sideproject.profile.ProfileActivity;
+import io.moku.davide.sideproject.R;
+import io.moku.davide.sideproject.model.User;
 
 /**
  * Created by Davide Castello on 29/01/18.

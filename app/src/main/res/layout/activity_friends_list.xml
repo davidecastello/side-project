@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:indefinite_pager_indicator="http://schemas.android.com/apk/res-auto"
-    tools:context="io.moku.davide.testinglibraries.myFriends.FriendsListActivity">
+    tools:context="io.moku.davide.sideproject.myFriends.FriendsListActivity">
 
     <com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator
         android:id="@+id/pagerIndicator"

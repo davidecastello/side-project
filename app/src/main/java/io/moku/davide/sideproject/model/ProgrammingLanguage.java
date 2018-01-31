@@ -1,4 +1,4 @@
-package io.moku.davide.testinglibraries.model;
+package io.moku.davide.sideproject.model;
 
 /**
  * Created by Davide Castello on 30/01/18.

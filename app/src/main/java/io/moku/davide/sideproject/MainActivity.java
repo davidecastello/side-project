@@ -1,17 +1,15 @@
-package io.moku.davide.testinglibraries;
+package io.moku.davide.sideproject;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.moku.davide.testinglibraries.myFriends.FriendsListActivity;
-import io.moku.davide.testinglibraries.profile.ProfileActivity;
-import io.moku.davide.testinglibraries.utils.activity.BasicActivity;
+import io.moku.davide.sideproject.myFriends.FriendsListActivity;
+import io.moku.davide.sideproject.profile.ProfileActivity;
+import io.moku.davide.sideproject.utils.activity.BasicActivity;
 
 public class MainActivity extends BasicActivity {
 

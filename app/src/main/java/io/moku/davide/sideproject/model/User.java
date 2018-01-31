@@ -1,11 +1,11 @@
-package io.moku.davide.testinglibraries.model;
+package io.moku.davide.sideproject.model;
 
 import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import io.moku.davide.testinglibraries.R;
+import io.moku.davide.sideproject.R;
 
 /**
  * Created by Davide Castello on 29/01/18.

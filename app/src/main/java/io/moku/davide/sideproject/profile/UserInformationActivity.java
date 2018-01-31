@@ -1,4 +1,4 @@
-package io.moku.davide.testinglibraries.profile;
+package io.moku.davide.sideproject.profile;
 
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
@@ -10,9 +10,9 @@ import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.moku.davide.testinglibraries.R;
-import io.moku.davide.testinglibraries.model.User;
-import io.moku.davide.testinglibraries.utils.activity.BasicSecondaryActivity;
+import io.moku.davide.sideproject.R;
+import io.moku.davide.sideproject.model.User;
+import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity;
 
 public class UserInformationActivity extends BasicSecondaryActivity {
 

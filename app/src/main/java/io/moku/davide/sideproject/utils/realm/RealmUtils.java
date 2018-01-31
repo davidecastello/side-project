@@ -1,6 +1,4 @@
-package io.moku.davide.testinglibraries.utils.realm;
-
-import android.content.Context;
+package io.moku.davide.sideproject.utils.realm;
 
 /**
  * Created by Davide Castello on 30/01/18.

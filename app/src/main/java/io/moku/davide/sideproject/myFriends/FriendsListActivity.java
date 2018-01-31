@@ -1,4 +1,4 @@
-package io.moku.davide.testinglibraries.myFriends;
+package io.moku.davide.sideproject.myFriends;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,11 +8,11 @@ import com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.moku.davide.testinglibraries.R;
-import io.moku.davide.testinglibraries.model.User;
-import io.moku.davide.testinglibraries.utils.activity.BasicSecondaryActivity;
-import io.moku.davide.testinglibraries.utils.recyclerView.MyRecyclerAdapter;
-import io.moku.davide.testinglibraries.utils.recyclerView.OnPagerNumberChangeListener;
+import io.moku.davide.sideproject.R;
+import io.moku.davide.sideproject.model.User;
+import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity;
+import io.moku.davide.sideproject.utils.recyclerView.MyRecyclerAdapter;
+import io.moku.davide.sideproject.utils.recyclerView.OnPagerNumberChangeListener;
 
 public class FriendsListActivity extends BasicSecondaryActivity implements OnPagerNumberChangeListener {
 

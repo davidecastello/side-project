@@ -1,8 +1,6 @@
-package io.moku.davide.testinglibraries;
+package io.moku.davide.sideproject;
 
 import android.app.Application;
-
-import io.moku.davide.testinglibraries.utils.realm.RealmUtils;
 
 /**
  * Created by Davide Castello on 30/01/18.

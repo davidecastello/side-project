@@ -1,4 +1,4 @@
-package io.moku.davide.testinglibraries.utils.activity;
+package io.moku.davide.sideproject.utils.activity;
 
 public class BasicSecondaryActivity extends BasicActivity {
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.moku.davide.testinglibraries.profile.ProfileActivity">
+    tools:context="io.moku.davide.sideproject.profile.ProfileActivity">
 
     <ImageView
         android:id="@+id/backgroundCover"

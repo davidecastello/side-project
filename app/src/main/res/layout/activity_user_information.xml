@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.moku.davide.testinglibraries.profile.UserInformationActivity"
+    tools:context="io.moku.davide.sideproject.profile.UserInformationActivity"
     android:id="@+id/constraintLayout">
 
     <!-- Try new different things that you can do with ConstraintLayout, even if it doesn't make
