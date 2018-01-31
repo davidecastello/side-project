@@ -5,20 +5,16 @@
   	"info": "Android & iOS Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
   	"used_languages": [
   		{
-  			"id": 3, 
-  			"percentage": 40.0 
+  			"id": 0,
+  			"percentage": 65.0
   		},
   		{
-  			"id": 1, 
-  			"percentage": 20.0 
+  			"id": 11,
+  			"percentage": 25.0
   		},
   		{
-  			"id": 6, 
-  			"percentage": 20.0 
-  		},
-  		{
-  			"id": 0, 
-  			"percentage": 20.0 
+  			"id": 9,
+  			"percentage": 10.0
   		}
   	]
   },
@@ -29,19 +25,19 @@
   	"used_languages": [
   		{
   			"id": 5,
-  			"percentage": 30.0 
+  			"percentage": 37.37
   		},
   		{
-  			"id": 8, 
-  			"percentage": 30.0 
+  			"id": 3,
+  			"percentage": 37.35
   		},
+		{
+			"id": 4,
+			"percentage": 25.27
+		},
   		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
+  			"id": 10,
+  			"percentage": 0.01
   		}
   	]
   },
@@ -120,20 +116,12 @@
   	"info": "Full-Stack Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
   	"used_languages": [
   		{
-  			"id": 0, 
-  			"percentage": 30.0 
+  			"id": 5,
+  			"percentage": 85.0
   		},
   		{
-  			"id": 8, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
+  			"id": 3,
+  			"percentage": 15.0
   		}
   	]
   },
