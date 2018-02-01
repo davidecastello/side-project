@@ -23,19 +23,19 @@ import io.moku.davide.sideproject.model.User;
  * Copyright © 2018 Moku S.r.l. All rights reserved.
  */
 
-public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.MyViewHolder> {
+public class MyFriendsBigCellAdapter extends RecyclerView.Adapter<MyFriendsBigCellAdapter.MyViewHolder> {
 
     private Context context;
     private List<User> users;
 
-    public MyRecyclerAdapter(Context context, List<User> users) {
+    public MyFriendsBigCellAdapter(Context context, List<User> users) {
         this.context = context;
         this.users = users;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.view_holder_item_layout, parent, false));
+        return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.my_friends_big_cell_layout, parent, false));
     }
 
     @Override
