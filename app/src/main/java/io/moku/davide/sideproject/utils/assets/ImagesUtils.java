@@ -20,7 +20,7 @@ public class ImagesUtils {
         boolean validUrl = !TextUtils.isEmpty(url);
         Picasso picasso = Picasso.with(context);
         RequestCreator creator = (validUrl) ? picasso.load(url) : picasso.load(placeholderId);
-        creator = creator.resize(400, 400)
+        creator = creator.resize(1200, 1200)
                 .centerCrop()
                 .placeholder(placeholderId);
         if (validUrl) { creator = creator.error(placeholderId); }
