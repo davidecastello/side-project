@@ -46,5 +46,21 @@
 	{
 		"id": 11,
 		"name": "Swift"
+	},
+	{
+		"id": 12,
+		"name": "Objective-C"
+	},
+	{
+		"id": 13,
+		"name": "Typescript"
+	},
+	{
+		"id": 14,
+		"name": "COBOL"
+	},
+	{
+		"id": 15,
+		"name": "Go"
 	}
 ]

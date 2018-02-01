@@ -8,7 +8,7 @@
 		"used_languages": [
 			{
 				"id": 0,
-				"percentage": 65.0
+				"percentage": 55.0
 			},
 			{
 				"id": 11,
@@ -16,7 +16,7 @@
 			},
 			{
 				"id": 9,
-				"percentage": 10.0
+				"percentage": 20.0
 			}
 		]
 	},
@@ -53,20 +53,12 @@
 		"background_cover_url": "",
 		"used_languages": [
 			{
-				"id": 0,
-				"percentage": 20.0
-			},
-			{
-				"id": 8,
-				"percentage": 10.0
-			},
-			{
 				"id": 6,
 				"percentage": 60.0
 			},
 			{
-				"id": 4,
-				"percentage": 10.0
+				"id": 14,
+				"percentage": 40.0
 			}
 		]
 	},
@@ -78,20 +70,20 @@
 		"background_cover_url": "",
 		"used_languages": [
 			{
-				"id": 0,
+				"id": 11,
 				"percentage": 30.0
 			},
 			{
-				"id": 8,
+				"id": 12,
+				"percentage": 20.0
+			},
+			{
+				"id": 3,
 				"percentage": 30.0
 			},
 			{
-				"id": 6,
-				"percentage": 10.0
-			},
-			{
-				"id": 4,
-				"percentage": 30.0
+				"id": 5,
+				"percentage": 20.0
 			}
 		]
 	},
@@ -103,20 +95,12 @@
 		"background_cover_url": "",
 		"used_languages": [
 			{
-				"id": 0,
-				"percentage": 30.0
+				"id": 3,
+				"percentage": 85.0
 			},
 			{
-				"id": 8,
-				"percentage": 30.0
-			},
-			{
-				"id": 6,
-				"percentage": 10.0
-			},
-			{
-				"id": 4,
-				"percentage": 30.0
+				"id": 5,
+				"percentage": 15.0
 			}
 		]
 	},
@@ -129,11 +113,15 @@
 		"used_languages": [
 			{
 				"id": 5,
-				"percentage": 85.0
+				"percentage": 60.0
 			},
 			{
 				"id": 3,
-				"percentage": 15.0
+				"percentage": 10.0
+			},
+			{
+				"id": 13,
+				"percentage": 30.0
 			}
 		]
 	},
@@ -145,20 +133,12 @@
 		"background_cover_url": "",
 		"used_languages": [
 			{
-				"id": 0,
-				"percentage": 30.0
+				"id": 3,
+				"percentage": 80.0
 			},
 			{
-				"id": 8,
-				"percentage": 30.0
-			},
-			{
-				"id": 6,
-				"percentage": 10.0
-			},
-			{
-				"id": 4,
-				"percentage": 30.0
+				"id": 15,
+				"percentage": 20.0
 			}
 		]
 	},
@@ -170,20 +150,16 @@
 		"background_cover_url": "",
 		"used_languages": [
 			{
-				"id": 0,
-				"percentage": 30.0
+				"id": 13,
+				"percentage": 40.0
 			},
 			{
-				"id": 8,
-				"percentage": 30.0
+				"id": 5,
+				"percentage": 40.0
 			},
 			{
-				"id": 6,
-				"percentage": 10.0
-			},
-			{
-				"id": 4,
-				"percentage": 30.0
+				"id": 3,
+				"percentage": 20.0
 			}
 		]
 	},
@@ -195,20 +171,8 @@
 		"background_cover_url": "",
 		"used_languages": [
 			{
-				"id": 0,
-				"percentage": 30.0
-			},
-			{
-				"id": 8,
-				"percentage": 30.0
-			},
-			{
-				"id": 6,
-				"percentage": 10.0
-			},
-			{
-				"id": 4,
-				"percentage": 30.0
+				"id": 5,
+				"percentage": 100.0
 			}
 		]
 	},
@@ -220,20 +184,12 @@
 		"background_cover_url": "",
 		"used_languages": [
 			{
-				"id": 0,
-				"percentage": 30.0
+				"id": 5,
+				"percentage": 50.0
 			},
 			{
-				"id": 8,
-				"percentage": 30.0
-			},
-			{
-				"id": 6,
-				"percentage": 10.0
-			},
-			{
-				"id": 4,
-				"percentage": 30.0
+				"id": 13,
+				"percentage": 50.0
 			}
 		]
 	},
@@ -245,20 +201,12 @@
 		"background_cover_url": "",
 		"used_languages": [
 			{
-				"id": 0,
-				"percentage": 30.0
+				"id": 5,
+				"percentage": 50.0
 			},
 			{
-				"id": 8,
-				"percentage": 30.0
-			},
-			{
-				"id": 6,
-				"percentage": 10.0
-			},
-			{
-				"id": 4,
-				"percentage": 30.0
+				"id": 13,
+				"percentage": 50.0
 			}
 		]
 	},
@@ -270,20 +218,12 @@
 		"background_cover_url": "",
 		"used_languages": [
 			{
-				"id": 0,
-				"percentage": 30.0
+				"id": 11,
+				"percentage": 50.0
 			},
 			{
-				"id": 8,
-				"percentage": 30.0
-			},
-			{
-				"id": 6,
-				"percentage": 10.0
-			},
-			{
-				"id": 4,
-				"percentage": 30.0
+				"id": 12,
+				"percentage": 50.0
 			}
 		]
 	},
@@ -295,19 +235,11 @@
 		"background_cover_url": "",
 		"used_languages": [
 			{
-				"id": 0,
-				"percentage": 30.0
+				"id": 5,
+				"percentage": 70.0
 			},
 			{
-				"id": 8,
-				"percentage": 30.0
-			},
-			{
-				"id": 6,
-				"percentage": 10.0
-			},
-			{
-				"id": 4,
+				"id": 14,
 				"percentage": 30.0
 			}
 		]
