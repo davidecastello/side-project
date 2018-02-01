@@ -84,9 +84,11 @@ public class RealmUtils {
     private static List<ProgrammingLanguage> loadProgrammingLanguages(Gson gson, Context context) {
         List<ProgrammingLanguage> programmingLanguages = new ArrayList<>();
         String dbFileProgrammingLanguages = AssetsUtils.readJsonFile(context, Constants.DB_FILE_PROGRAMMING_LANGUAGUES);
-        JsonArray programmingLanguagesJson = new JsonParser().parse(dbFileProgrammingLanguages).getAsJsonArray();
-        for (JsonElement element : programmingLanguagesJson) {
-            programmingLanguages.add(gson.fromJson(element, ProgrammingLanguage.class));
+        if (dbFileProgrammingLanguages != null) {
+            JsonArray programmingLanguagesJson = new JsonParser().parse(dbFileProgrammingLanguages).getAsJsonArray();
+            for (JsonElement element : programmingLanguagesJson) {
+                programmingLanguages.add(gson.fromJson(element, ProgrammingLanguage.class));
+            }
         }
         return programmingLanguages;
     }
@@ -94,9 +96,11 @@ public class RealmUtils {
     private static List<User> loadUsers(Gson gson, Context context) {
         List<User> users = new ArrayList<>();
         String dbFileUsers = AssetsUtils.readJsonFile(context, Constants.DB_FILE_USERS);
-        JsonArray usersJson = new JsonParser().parse(dbFileUsers).getAsJsonArray();
-        for (JsonElement element : usersJson) {
-            users.add(gson.fromJson(element, User.class));
+        if (dbFileUsers != null) {
+            JsonArray usersJson = new JsonParser().parse(dbFileUsers).getAsJsonArray();
+            for (JsonElement element : usersJson) {
+                users.add(gson.fromJson(element, User.class));
+            }
         }
         return users;
     }
