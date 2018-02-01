@@ -11,14 +11,14 @@ import butterknife.ButterKnife;
 import io.moku.davide.sideproject.R;
 import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity;
-import io.moku.davide.sideproject.utils.recyclerView.MyRecyclerAdapter;
+import io.moku.davide.sideproject.utils.recyclerView.MyFriendsBigCellAdapter;
 import io.moku.davide.sideproject.utils.recyclerView.OnPagerNumberChangeListener;
 
 public class FriendsListActivity extends BasicSecondaryActivity implements OnPagerNumberChangeListener {
 
     @BindView(R.id.recyclerView) RecyclerView recyclerView;
     @BindView(R.id.pagerIndicator) IndefinitePagerIndicator pagerIndicator;
-    private MyRecyclerAdapter recyclerViewAdapter;
+    private MyFriendsBigCellAdapter recyclerViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class FriendsListActivity extends BasicSecondaryActivity implements OnPag
     }
 
     private void setupViews() {
-        recyclerViewAdapter = new MyRecyclerAdapter(this, User.getAllUsers());
+        recyclerViewAdapter = new MyFriendsBigCellAdapter(this, User.getAllUsers());
         recyclerView.setAdapter(recyclerViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         pagerIndicator.attachToRecyclerView(recyclerView);
