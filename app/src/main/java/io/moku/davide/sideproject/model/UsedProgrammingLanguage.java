@@ -4,7 +4,10 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.Comparator;
 
+import io.moku.davide.sideproject.utils.realm.RealmUtils;
+import io.realm.Realm;
 import io.realm.RealmObject;
+import io.realm.RealmResults;
 
 /**
  * Created by Davide Castello on 31/01/18.

@@ -1,6 +1,12 @@
 package io.moku.davide.sideproject.model;
 
+import java.util.Comparator;
+
+import io.moku.davide.sideproject.utils.gridView.ProgrammingLanguageUsage;
+import io.moku.davide.sideproject.utils.realm.RealmUtils;
+import io.realm.Realm;
 import io.realm.RealmObject;
+import io.realm.RealmResults;
 import io.realm.annotations.PrimaryKey;
 
 /**
@@ -36,4 +42,47 @@ public class ProgrammingLanguage extends RealmObject {
     public void setName(String name) {
         this.name = name;
     }
+
+    public static RealmResults<ProgrammingLanguage> getAllLanguages() {
+
+        Realm realm = null;
+        RealmResults<ProgrammingLanguage> languages = null;
+        try {
+            realm = RealmUtils.getCurrentRealm();
+            languages = realm.where(ProgrammingLanguage.class).findAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (realm != null && !realm.isClosed()) {
+                realm.close();
+            }
+        }
+        return languages;
+    }
+
+    public int getUsage() {
+        int people = 0;
+        for(User user : User.getAllUsers()) {
+            for (UsedProgrammingLanguage language : user.getUsedProgrammingLanguages()) {
+                if (language.getLanguage().getId() == id) {
+                    people++;
+                }
+            }
+        }
+        return people;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -23,4 +23,8 @@
     <string name="example_percentage_3">@string/example_percentage_1</string>
     <string name="example_percentage_4">10%</string>
     <string name="percentage_format">%d%%</string>
+    <string name="allProgrammingLanguages">Linguaggi di programmazione</string>
+    <string name="ordered_by_usage">Ordinati per uso</string>
+    <string name="example_usage">7 persone</string>
+    <string name="usage">%d persone</string>
 </resources>

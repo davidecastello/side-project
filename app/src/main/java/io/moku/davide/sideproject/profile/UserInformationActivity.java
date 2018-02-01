@@ -1,9 +1,12 @@
 package io.moku.davide.sideproject.profile;
 
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.Collections;
@@ -16,6 +19,7 @@ import butterknife.ButterKnife;
 import io.moku.davide.sideproject.R;
 import io.moku.davide.sideproject.model.UsedProgrammingLanguage;
 import io.moku.davide.sideproject.model.User;
+import io.moku.davide.sideproject.programmingLanguages.ProgrammingLanguagesActivity;
 import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity;
 import io.realm.RealmList;
 
@@ -23,6 +27,7 @@ public class UserInformationActivity extends BasicSecondaryActivity {
 
     @BindView(R.id.constraintLayout) ConstraintLayout constraintLayout;
     @BindView(R.id.personalInfo) TextView personalInfo;
+    @BindView(R.id.seeAll) RelativeLayout seeAllLayout;
 
     @BindViews({ R.id.firstLanguageLayout, R.id.secondLanguageLayout, R.id.thirdLanguageLayout, R.id.fourthLanguageLayout }) List<LinearLayout> languageLayouts;
     @BindViews({ R.id.firstLanguage, R.id.secondLanguage, R.id.thirdLanguage, R.id.fourthLanguage }) List<TextView> languages;
@@ -41,7 +46,18 @@ public class UserInformationActivity extends BasicSecondaryActivity {
         int userId = getIntent().getIntExtra(User.EXTRA_USER_ID, -1);
         user = User.getUser(userId);
 
+        setListeners();
+
         updateView();
+    }
+
+    private void setListeners() {
+        seeAllLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(view.getContext(), ProgrammingLanguagesActivity.class));
+            }
+        });
     }
 
     private void updateView() {
