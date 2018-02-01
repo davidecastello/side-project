@@ -27,10 +27,12 @@
         <activity
             android:name=".profile.ProfileActivity"
             android:label="@string/profile" />
-        <activity android:name=".profile.UserInformationActivity"
-            android:label="@string/info"/>
+        <activity
+            android:name=".profile.UserInformationActivity"
+            android:label="@string/info" />
         <activity android:name=".utils.activity.BasicActivity" />
         <activity android:name=".utils.activity.BasicSecondaryActivity" />
+        <activity android:name=".profile.DisplayPhotoActivity"></activity>
     </application>
 
 </manifest>

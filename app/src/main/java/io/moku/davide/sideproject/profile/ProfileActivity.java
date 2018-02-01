@@ -48,6 +48,8 @@ public class ProfileActivity extends BasicSecondaryActivity {
                 startActivity(intent);
             }
         });
+        profilePicture.setOnClickListener(new OnPhotoClickListener(user.getId(), true));
+        backgroundCover.setOnClickListener(new OnPhotoClickListener(user.getId(), false));
     }
 
     private void updateView() {
@@ -59,5 +61,24 @@ public class ProfileActivity extends BasicSecondaryActivity {
         name.setText(user.getName());
         user.loadProfilePicture(this, profilePicture);
         user.loadBackgroundCover(this, backgroundCover);
+    }
+
+    public class OnPhotoClickListener implements View.OnClickListener {
+
+        private int userId;
+        private boolean isProfilePicture;
+
+        public OnPhotoClickListener(int userId, boolean isProfilePicture) {
+            this.userId = userId;
+            this.isProfilePicture = isProfilePicture;
+        }
+
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(view.getContext(), DisplayPhotoActivity.class);
+            intent.putExtra(User.EXTRA_USER_ID, userId);
+            intent.putExtra(DisplayPhotoActivity.IS_PROFILE_PICTURE, isProfilePicture);
+            startActivity(intent);
+        }
     }
 }
