@@ -13,4 +13,6 @@ public class Constants {
     public static final String DB_FILE_PROGRAMMING_LANGUAGUES = "programming_languages.json";
     public static final String DB_FILE_USERS = "users.json";
 
+    // Number of friends shown in homepage
+    public static final int NUMBER_OF_FRIENDS_IN_HOMEPAGE = 3;
 }

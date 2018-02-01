@@ -2,6 +2,8 @@ package io.moku.davide.sideproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -13,15 +15,16 @@ import butterknife.ButterKnife;
 import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.myFriends.FriendsListActivity;
 import io.moku.davide.sideproject.profile.ProfileActivity;
+import io.moku.davide.sideproject.utils.Constants;
 import io.moku.davide.sideproject.utils.activity.BasicActivity;
+import io.moku.davide.sideproject.utils.recyclerView.MyFriendsSmallCellAdapter;
 
 public class MainActivity extends BasicActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
-    @BindView(R.id.user_layout) RelativeLayout userLayout;
-    @BindView(R.id.name) TextView userName;
-    @BindView(R.id.personalInfo) TextView userPersonalInfo;
+    @BindView(R.id.recyclerView) RecyclerView recyclerView;
     @BindView(R.id.seeAll) RelativeLayout seeAllLayout;
+    private MyFriendsSmallCellAdapter recyclerViewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,26 +34,13 @@ public class MainActivity extends BasicActivity {
 
         setListeners();
 
-        updateView();
+        setupViews();
     }
 
-    private void updateView() {
-
-        // TODO: RecyclerView, mostrare i primi 3 utenti
-        List<User> users = User.getAllUsers();
-        if (users.size() != 0) {
-            final User user = users.get(0);
-            userName.setText(user.getName());
-            userPersonalInfo.setText(user.getPersonalInfo());
-            userLayout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(view.getContext(), ProfileActivity.class);
-                    intent.putExtra(User.EXTRA_USER_ID, user.getId());
-                    startActivity(intent);
-                }
-            });
-        }
+    private void setupViews() {
+        recyclerViewAdapter = new MyFriendsSmallCellAdapter(this, User.getAllUsers().subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
+        recyclerView.setAdapter(recyclerViewAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
 
     private void setListeners() {

@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import butterknife.BindView;
@@ -51,6 +53,21 @@ public class MyFriendsSmallCellAdapter extends RecyclerView.Adapter<MyFriendsSma
                 view.getContext().startActivity(intent);
             }
         });
+
+        String url = currentUser.getName(); // TODO getProfilePictureUrl (l'altro metodo è getBackgroundCoverUrl)
+        url = "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/11102774_903486346379242_3048058666227335523_n.jpg?oh=2e2c7528407739265eb685650c0f963d&oe=5AE9F0B0";
+        if(url != null) {
+            Picasso.with(context)
+                    .load(url)
+                    .placeholder(R.drawable.boy)
+                    .error(R.drawable.boy)
+                    .into(holder.imageView);
+        } else {
+            Picasso.with(context)
+                    .load(R.drawable.boy)
+                    .placeholder(R.drawable.boy)
+                    .into(holder.imageView);
+        }
     }
 
     @Override

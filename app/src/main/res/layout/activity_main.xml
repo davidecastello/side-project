@@ -26,54 +26,19 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/user_layout"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/friendsListLayout"
-        android:background="@drawable/cell_background"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/boy"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="20dp"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/imageView"
-            android:layout_centerVertical="true"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:id="@+id/name"
-                android:text="@string/example_name"
-                android:layout_marginBottom="5dp"
-                style="@style/customTextViewsBold"/>
-
-            <TextView
-                android:layout_marginTop="5dp"
-                android:id="@+id/personalInfo"
-                android:text="@string/example_personalInfo"
-                android:ellipsize="end"
-                android:maxLines="2"
-                style="@style/customTextViewsLight"/>
-
-        </LinearLayout>
-
-    </RelativeLayout>
+        tools:listitem="@layout/my_friends_small_cell_layout"
+        tools:itemCount="3"
+        android:layout_below="@id/friendsListLayout"/>
 
     <RelativeLayout
         android:id="@+id/seeAll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/user_layout"
+        android:layout_below="@id/recyclerView"
         android:layout_marginTop="10dp">
 
         <LinearLayout

@@ -71,10 +71,10 @@ public class User extends RealmObject {
         this.usedProgrammingLanguages = usedProgrammingLanguages;
     }
 
-    public static List<User> getAllUsers() {
+    public static RealmResults<User> getAllUsers() {
 
         Realm realm = null;
-        List<User> users = new ArrayList<>();
+        RealmResults<User> users = null;
         try {
             realm = RealmUtils.getCurrentRealm();
             users = realm.where(User.class).findAll();

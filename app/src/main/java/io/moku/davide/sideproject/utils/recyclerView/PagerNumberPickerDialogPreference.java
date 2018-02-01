@@ -12,6 +12,7 @@ import android.widget.NumberPicker;
 
 import io.moku.davide.sideproject.R;
 import io.moku.davide.sideproject.model.User;
+import io.realm.RealmResults;
 
 /**
  * Created by Davide Castello on 29/01/18.
@@ -32,7 +33,8 @@ public class PagerNumberPickerDialogPreference extends DialogFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        MAX_PAGES = User.getAllUsers().size();
+        RealmResults<User> users = User.getAllUsers();
+        MAX_PAGES = (users != null && users.size() != 0) ? users.size() : 0;
         preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
     }
 
