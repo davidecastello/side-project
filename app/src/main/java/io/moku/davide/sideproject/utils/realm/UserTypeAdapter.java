@@ -52,6 +52,12 @@ public class UserTypeAdapter extends TypeAdapter<User> {
                     case "info":
                         user.setPersonalInfo(getStringValue(in));
                         break;
+                    case "profile_picture_url":
+                        user.setProfilePictureUrl(getStringValue(in));
+                        break;
+                    case "background_cover_url":
+                        user.setBackgroundCoverUrl(getStringValue(in));
+                        break;
                     case "used_languages":
                         setUsedLanguages(realm, user, in);
                         break;

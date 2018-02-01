@@ -51,6 +51,7 @@ public class MyFriendsBigCellAdapter extends RecyclerView.Adapter<MyFriendsBigCe
                 view.getContext().startActivity(intent);
             }
         });
+        currentUser.loadProfilePicture(context, holder.imageView);
     }
 
     @Override

@@ -3,11 +3,14 @@ package io.moku.davide.sideproject.model;
 import com.google.gson.annotations.SerializedName;
 
 import android.content.Context;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import io.moku.davide.sideproject.R;
+import io.moku.davide.sideproject.utils.assets.AssetsUtils;
+import io.moku.davide.sideproject.utils.assets.ImagesUtils;
 import io.moku.davide.sideproject.utils.realm.RealmUtils;
 import io.realm.Realm;
 import io.realm.RealmList;
@@ -29,13 +32,17 @@ public class User extends RealmObject {
     @PrimaryKey private int id;
     private String name;
     private String personalInfo;
+    private String profilePictureUrl;
+    private String backgroundCoverUrl;
     private RealmList<UsedProgrammingLanguage> usedProgrammingLanguages;
 
     public User() {}
-    public User(int id, String name, String personalInfo, RealmList<UsedProgrammingLanguage> usedProgrammingLanguages) {
+    public User(int id, String name, String personalInfo, String profilePictureUrl, String backgroundCoverUrl, RealmList<UsedProgrammingLanguage> usedProgrammingLanguages) {
         this.id = id;
         this.name = name;
         this.personalInfo = personalInfo;
+        this.profilePictureUrl = profilePictureUrl;
+        this.backgroundCoverUrl = backgroundCoverUrl;
         this.usedProgrammingLanguages = usedProgrammingLanguages;
     }
 
@@ -61,6 +68,22 @@ public class User extends RealmObject {
 
     public void setPersonalInfo(String personalInfo) {
         this.personalInfo = personalInfo;
+    }
+
+    public String getProfilePictureUrl() {
+        return profilePictureUrl;
+    }
+
+    public void setProfilePictureUrl(String profilePictureUrl) {
+        this.profilePictureUrl = profilePictureUrl;
+    }
+
+    public String getBackgroundCoverUrl() {
+        return backgroundCoverUrl;
+    }
+
+    public void setBackgroundCoverUrl(String backgroundCoverUrl) {
+        this.backgroundCoverUrl = backgroundCoverUrl;
     }
 
     public RealmList<UsedProgrammingLanguage> getUsedProgrammingLanguages() {
@@ -105,5 +128,13 @@ public class User extends RealmObject {
             }
         }
         return user;
+    }
+
+    public void loadProfilePicture(Context context, ImageView imageView) {
+        ImagesUtils.loadUrlIntoImageView(profilePictureUrl, context, imageView, R.drawable.boy);
+    }
+
+    public void loadBackgroundCover(Context context, ImageView imageView) {
+        ImagesUtils.loadUrlIntoImageView(backgroundCoverUrl, context, imageView, R.drawable.pattern);
     }
 }

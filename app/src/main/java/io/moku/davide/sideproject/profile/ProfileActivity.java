@@ -57,5 +57,7 @@ public class ProfileActivity extends BasicSecondaryActivity {
 
         // User's info
         name.setText(user.getName());
+        user.loadProfilePicture(this, profilePicture);
+        user.loadBackgroundCover(this, backgroundCover);
     }
 }

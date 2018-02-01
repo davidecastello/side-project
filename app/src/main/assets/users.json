@@ -1,289 +1,315 @@
 [
-  {
-  	"id": 0,
-  	"name": "Davide Castello", 
-  	"info": "Android & iOS Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0,
-  			"percentage": 65.0
-  		},
-  		{
-  			"id": 11,
-  			"percentage": 25.0
-  		},
-  		{
-  			"id": 9,
-  			"percentage": 10.0
-  		}
-  	]
-  },
-  {
-  	"id": 1,
-  	"name": "Samuele Zanella", 
-  	"info": "Full-Stack Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 5,
-  			"percentage": 37.37
-  		},
-  		{
-  			"id": 3,
-  			"percentage": 37.35
-  		},
-  		{
-  			"id": 10,
-  			"percentage": 0.01
-  		},
-		{
-			"id": 4,
-			"percentage": 25.27
-		}
-  	]
-  },
-  {
-  	"id": 2,
-  	"name": "Marco Mezzavilla", 
-  	"info": "Designer & User Experience Expert.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0, 
-  			"percentage": 20.0 
-  		},
-  		{
-  			"id": 8, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 60.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 10.0 
-  		}
-  	]
-  },
-  {
-  	"id": 3,
-  	"name": "Simone Pozzobon", 
-  	"info": "CEO & iOS Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 8, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
-  		}
-  	]
-  },
-  {
-  	"id": 4,
-  	"name": "Fabio Ros", 
-  	"info": "Backend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 8, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
-  		}
-  	]
-  },
-  {
-  	"id": 5,
-  	"name": "Serena Girardi", 
-  	"info": "Full-Stack Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 5,
-  			"percentage": 85.0
-  		},
-  		{
-  			"id": 3,
-  			"percentage": 15.0
-  		}
-  	]
-  },
-  {
-  	"id": 6,
-  	"name": "Michele Redolfi", 
-  	"info": "CTO & Backend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 8, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
-  		}
-  	]
-  },
-  {
-  	"id": 7,
-  	"name": "Saverio Follador", 
-  	"info": "Frontend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 8, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
-  		}
-  	]
-  },
-  {
-  	"id": 8,
-  	"name": "Andrea Zorzi", 
-  	"info": "Frontend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 8, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
-  		}
-  	]
-  },
-  {
-  	"id": 9,
-  	"name": "Matteo Granzotto", 
-  	"info": "Frontend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 8, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
-  		}
-  	]
-  },
-  {
-  	"id": 10,
-  	"name": "Jacopo Mattietto", 
-  	"info": "Frontend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 8, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
-  		}
-  	]
-  },
-  {
-  	"id": 11,
-  	"name": "Matteo Gazzato", 
-  	"info": "iOS Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 8, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
-  		}
-  	]
-  },
-  {
-  	"id": 12,
-  	"name": "Piera Scalco", 
-  	"info": "CFO & Frontend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
-  	"used_languages": [
-  		{
-  			"id": 0, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 8, 
-  			"percentage": 30.0 
-  		},
-  		{
-  			"id": 6, 
-  			"percentage": 10.0 
-  		},
-  		{
-  			"id": 4, 
-  			"percentage": 30.0 
-  		}
-  	]
-  }
+	{
+		"id": 0,
+		"name": "Davide Castello",
+		"info": "Android & iOS Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/11102774_903486346379242_3048058666227335523_n.jpg?oh=2e2c7528407739265eb685650c0f963d&oe=5AE9F0B0",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 65.0
+			},
+			{
+				"id": 11,
+				"percentage": 25.0
+			},
+			{
+				"id": 9,
+				"percentage": 10.0
+			}
+		]
+	},
+	{
+		"id": 1,
+		"name": "Samuele Zanella",
+		"info": "Full-Stack Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/13690742_10208667783046179_3274409061881700860_n.jpg?oh=55b14e3e9be86ece1fb722b329de028a&oe=5B1E25DF",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 5,
+				"percentage": 37.37
+			},
+			{
+				"id": 3,
+				"percentage": 37.35
+			},
+			{
+				"id": 10,
+				"percentage": 0.01
+			},
+			{
+				"id": 4,
+				"percentage": 25.27
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Marco Mezzavilla",
+		"info": "Designer & User Experience Expert.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/18698047_10213430143367701_4334212551845872756_n.jpg?oh=6de9495c824e5ae2fa4bcdaac097d3d6&oe=5AD87149",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 20.0
+			},
+			{
+				"id": 8,
+				"percentage": 10.0
+			},
+			{
+				"id": 6,
+				"percentage": 60.0
+			},
+			{
+				"id": 4,
+				"percentage": 10.0
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Simone Pozzobon",
+		"info": "CEO & iOS Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/11406729_10155638021390548_5912761140452054273_n.jpg?oh=355fc8221067c5eb57f9c597b79cb695&oe=5B1B4DAD",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 30.0
+			},
+			{
+				"id": 8,
+				"percentage": 30.0
+			},
+			{
+				"id": 6,
+				"percentage": 10.0
+			},
+			{
+				"id": 4,
+				"percentage": 30.0
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Fabio Ros",
+		"info": "Backend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/13007375_10208180670148037_4849162897789192264_n.jpg?oh=64c1534e78fbd915ddde7f6208b37640&oe=5AE42A97",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 30.0
+			},
+			{
+				"id": 8,
+				"percentage": 30.0
+			},
+			{
+				"id": 6,
+				"percentage": 10.0
+			},
+			{
+				"id": 4,
+				"percentage": 30.0
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "Serena Girardi",
+		"info": "Full-Stack Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/1476603_846634882034036_6368396784000543838_n.jpg?oh=20931cddc06c2439c14d76d9efaee266&oe=5AD84312",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 5,
+				"percentage": 85.0
+			},
+			{
+				"id": 3,
+				"percentage": 15.0
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Michele Redolfi",
+		"info": "CTO & Backend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/936923_10201455676136843_94653668_n.jpg?oh=feeb7723848d74730abed64d78e73a83&oe=5ADF30D3",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 30.0
+			},
+			{
+				"id": 8,
+				"percentage": 30.0
+			},
+			{
+				"id": 6,
+				"percentage": 10.0
+			},
+			{
+				"id": 4,
+				"percentage": 30.0
+			}
+		]
+	},
+	{
+		"id": 7,
+		"name": "Saverio Follador",
+		"info": "Frontend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/19105568_10206963337640225_6876617663686014197_n.jpg?oh=7cf3229fb529c3fe8f28b63b384394c7&oe=5AEBAAFC",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 30.0
+			},
+			{
+				"id": 8,
+				"percentage": 30.0
+			},
+			{
+				"id": 6,
+				"percentage": 10.0
+			},
+			{
+				"id": 4,
+				"percentage": 30.0
+			}
+		]
+	},
+	{
+		"id": 8,
+		"name": "Andrea Zorzi",
+		"info": "Frontend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/17799379_10212946451364290_8627959538196122588_n.jpg?oh=62811580a0d4b53c027d27f0a8ad93dc&oe=5ADE81F7",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 30.0
+			},
+			{
+				"id": 8,
+				"percentage": 30.0
+			},
+			{
+				"id": 6,
+				"percentage": 10.0
+			},
+			{
+				"id": 4,
+				"percentage": 30.0
+			}
+		]
+	},
+	{
+		"id": 9,
+		"name": "Matteo Granzotto",
+		"info": "Frontend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-1/12651322_10208423180239623_4035949066752424397_n.jpg?oh=ee3d4552d8499657e1668c2de534bb7f&oe=5ADC2E74",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 30.0
+			},
+			{
+				"id": 8,
+				"percentage": 30.0
+			},
+			{
+				"id": 6,
+				"percentage": 10.0
+			},
+			{
+				"id": 4,
+				"percentage": 30.0
+			}
+		]
+	},
+	{
+		"id": 10,
+		"name": "Jacopo Mattietto",
+		"info": "Frontend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/10712929_10204681781427263_8728091588619178867_n.jpg?oh=b9c4fb176fcad9bf34b73b81423f442a&oe=5AE6A658",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 30.0
+			},
+			{
+				"id": 8,
+				"percentage": 30.0
+			},
+			{
+				"id": 6,
+				"percentage": 10.0
+			},
+			{
+				"id": 4,
+				"percentage": 30.0
+			}
+		]
+	},
+	{
+		"id": 11,
+		"name": "Matteo Gazzato",
+		"info": "iOS Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/18221838_10213192610117721_3605242551876024650_n.jpg?oh=d595a2e29297ec6593dd8ddbeba997b6&oe=5AD840B4",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 30.0
+			},
+			{
+				"id": 8,
+				"percentage": 30.0
+			},
+			{
+				"id": 6,
+				"percentage": 10.0
+			},
+			{
+				"id": 4,
+				"percentage": 30.0
+			}
+		]
+	},
+	{
+		"id": 12,
+		"name": "Piera Scalco",
+		"info": "CFO & Frontend Developer.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.",
+		"profile_picture_url": "https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/21149900_10213930578843795_5630262033926856368_n.jpg?oh=a2195ef2a02637ef285b4256ad450946&oe=5AE0499D",
+		"background_cover_url": "",
+		"used_languages": [
+			{
+				"id": 0,
+				"percentage": 30.0
+			},
+			{
+				"id": 8,
+				"percentage": 30.0
+			},
+			{
+				"id": 6,
+				"percentage": 10.0
+			},
+			{
+				"id": 4,
+				"percentage": 30.0
+			}
+		]
+	}
 ]
