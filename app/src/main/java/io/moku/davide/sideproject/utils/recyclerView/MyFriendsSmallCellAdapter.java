@@ -13,33 +13,33 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.moku.davide.sideproject.profile.ProfileActivity;
 import io.moku.davide.sideproject.R;
 import io.moku.davide.sideproject.model.User;
+import io.moku.davide.sideproject.profile.ProfileActivity;
 
 /**
- * Created by Davide Castello on 29/01/18.
- * Project: TestingLibraries
+ * Created by Davide Castello on 01/02/18.
+ * Project: side-project
  * Copyright © 2018 Moku S.r.l. All rights reserved.
  */
 
-public class MyFriendsBigCellAdapter extends RecyclerView.Adapter<MyFriendsBigCellAdapter.BigCellViewHolder> {
+public class MyFriendsSmallCellAdapter extends RecyclerView.Adapter<MyFriendsSmallCellAdapter.SmallCellViewHolder> {
 
     private Context context;
     private List<User> users;
 
-    public MyFriendsBigCellAdapter(Context context, List<User> users) {
+    public MyFriendsSmallCellAdapter(Context context, List<User> users) {
         this.context = context;
         this.users = users;
     }
 
     @Override
-    public BigCellViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new BigCellViewHolder(LayoutInflater.from(context).inflate(R.layout.my_friends_big_cell_layout, parent, false));
+    public SmallCellViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new SmallCellViewHolder(LayoutInflater.from(context).inflate(R.layout.my_friends_small_cell_layout, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(BigCellViewHolder holder, int position) {
+    public void onBindViewHolder(SmallCellViewHolder holder, int position) {
         final User currentUser = users.get(position);
         holder.name.setText(currentUser.getName());
         holder.personalInfo.setText(currentUser.getPersonalInfo());
@@ -58,13 +58,13 @@ public class MyFriendsBigCellAdapter extends RecyclerView.Adapter<MyFriendsBigCe
         return users.size();
     }
 
-    static class BigCellViewHolder extends RecyclerView.ViewHolder {
+    static class SmallCellViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.name) TextView name;
         @BindView(R.id.personalInfo) TextView personalInfo;
         @BindView(R.id.imageView) ImageView imageView;
 
-        public BigCellViewHolder(View itemView) {
+        public SmallCellViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
