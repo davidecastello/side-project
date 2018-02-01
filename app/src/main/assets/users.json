@@ -31,14 +31,14 @@
   			"id": 3,
   			"percentage": 37.35
   		},
-		{
-			"id": 4,
-			"percentage": 25.27
-		},
   		{
   			"id": 10,
   			"percentage": 0.01
-  		}
+  		},
+		{
+			"id": 4,
+			"percentage": 25.27
+		}
   	]
   },
   {

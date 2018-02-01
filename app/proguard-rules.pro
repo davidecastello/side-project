@@ -15,3 +15,8 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+#
+# Picasso
+#
+-dontwarn com.squareup.okhttp.**

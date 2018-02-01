@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -16,6 +17,7 @@ import io.moku.davide.sideproject.R;
 import io.moku.davide.sideproject.model.UsedProgrammingLanguage;
 import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity;
+import io.realm.RealmList;
 
 public class UserInformationActivity extends BasicSecondaryActivity {
 
@@ -53,10 +55,12 @@ public class UserInformationActivity extends BasicSecondaryActivity {
 
         int usedLanguages = usedProgrammingLanguages.size(), languagesSlots = languageLayouts.size();
         if (usedLanguages > 0 && usedLanguages <= languagesSlots) {
-            // TODO Collections ordinare usedProgrammingLanguages con percentage decrescente
+            RealmList<UsedProgrammingLanguage> languagesOrderedList = new RealmList<>();
+            languagesOrderedList.addAll(usedProgrammingLanguages.subList(0, usedProgrammingLanguages.size()));
+            Collections.sort(languagesOrderedList, UsedProgrammingLanguage.ORDER_BY_PERCENTAGE);
             int i = 0;
             while (i < usedLanguages) {
-                UsedProgrammingLanguage l = usedProgrammingLanguages.get(i);
+                UsedProgrammingLanguage l = languagesOrderedList.get(i);
                 fixWeights(set, languages.get(i), l.getLanguage().getName(), percentages.get(i), l.getPercentage(), languageLayouts.get(i));
                 i++;
             }

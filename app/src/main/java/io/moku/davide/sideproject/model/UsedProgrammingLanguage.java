@@ -2,6 +2,8 @@ package io.moku.davide.sideproject.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Comparator;
+
 import io.realm.RealmObject;
 
 /**
@@ -14,6 +16,13 @@ public class UsedProgrammingLanguage extends RealmObject {
 
     private ProgrammingLanguage language;
     private float percentage;
+
+    public static final Comparator<UsedProgrammingLanguage> ORDER_BY_PERCENTAGE = new Comparator<UsedProgrammingLanguage>() {
+        @Override
+        public int compare(UsedProgrammingLanguage lhs, UsedProgrammingLanguage rhs) {
+            return (lhs.getPercentage() < rhs.getPercentage()) ? 1 : -1;
+        }
+    };
 
     public UsedProgrammingLanguage() {}
     public UsedProgrammingLanguage(ProgrammingLanguage language, float percentage) {
