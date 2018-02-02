@@ -1,4 +1,10 @@
 <resources>
+    <!-- Progress Dialog Helper -->
+    <string name="default_inital_msg">Attendere…</string>
+    <string name="default_done_msg">Operazione completata con successo!</string>
+    <string name="default_animation_name">tick.json</string>
+
+    <!-- App -->
     <string name="app_name">FacciaLibro</string>
     <string name="example_name">Gianni Gaggianni</string>
     <string name="example_personalInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non cursus metus. Nam pretium rhoncus est, id tincidunt neque congue nec. Aenean vel elementum nisi, vitae eleifend ex. Quisque condimentum tempor lacus eu viverra. Proin pulvinar interdum malesuada. Maecenas quis dui augue. Phasellus et consectetur ligula. Morbi eget egestas nunc, at dictum quam. Nam pharetra non ligula ut molestie. Phasellus non mi vitae dolor bibendum pulvinar.</string>
