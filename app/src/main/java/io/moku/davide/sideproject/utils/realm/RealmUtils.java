@@ -43,6 +43,10 @@ public class RealmUtils {
         return Realm.getInstance(currentConfiguration);
     }
 
+    public static int getCurrentInstancesCount() {
+        return Realm.getLocalInstanceCount(currentConfiguration);
+    }
+
     public static void onCreateApplication() {
         getCurrentRealm();
     }
