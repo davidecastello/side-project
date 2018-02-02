@@ -33,4 +33,7 @@
     <string name="ordered_by_usage">Ordinati per uso</string>
     <string name="example_usage">7 persone</string>
     <string name="usage">%d persone</string>
+    <string name="operation_running">Operazione in corso…</string>
+    <string name="added_to_friends">Aggiunto agli amici!</string>
+    <string name="something_went_wrong">Qualcosa è andato storto!</string>
 </resources>

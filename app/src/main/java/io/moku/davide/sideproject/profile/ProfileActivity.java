@@ -1,5 +1,6 @@
 package io.moku.davide.sideproject.profile;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +11,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.moku.davide.sideproject.R;
 import io.moku.davide.sideproject.model.User;
+import io.moku.davide.sideproject.network.asynctasks.AsyncAddFriend;
 import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity;
 
 public class ProfileActivity extends BasicSecondaryActivity {
@@ -40,6 +42,12 @@ public class ProfileActivity extends BasicSecondaryActivity {
     }
 
     private void setListeners() {
+        firstAction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                addFriend();
+            }
+        });
         thirdAction.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +58,10 @@ public class ProfileActivity extends BasicSecondaryActivity {
         });
         profilePicture.setOnClickListener(new OnPhotoClickListener(user.getId(), true));
         backgroundCover.setOnClickListener(new OnPhotoClickListener(user.getId(), false));
+    }
+
+    private void addFriend() {
+        new AsyncAddFriend(this).execute();
     }
 
     private void updateView() {
