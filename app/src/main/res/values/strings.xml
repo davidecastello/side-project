@@ -36,4 +36,9 @@
     <string name="operation_running">Operazione in corso…</string>
     <string name="added_to_friends">Aggiunto agli amici!</string>
     <string name="something_went_wrong">Qualcosa è andato storto!</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="no_message_yet">No message yet.</string>
+    <string name="hey_there_kotlin">Hey there, Kotlin!</string>
+    <string name="test_message">What\'s up, man?</string>
+    <string name="send_msg">Send message</string>
 </resources>

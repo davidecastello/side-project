@@ -64,4 +64,11 @@
 
     </RelativeLayout>
 
+    <Button
+        android:id="@+id/kotlinButton"
+        android:text="@string/kotlin"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        style="@style/customButtons"/>
+
 </RelativeLayout>

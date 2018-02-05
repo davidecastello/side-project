@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -12,6 +13,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import io.moku.davide.sideproject.kotlin.KotlinActivity;
+import io.moku.davide.sideproject.kotlin.KotlinActivityKt;
 import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.myFriends.FriendsListActivity;
 import io.moku.davide.sideproject.profile.ProfileActivity;
@@ -24,6 +27,7 @@ public class MainActivity extends BasicActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.recyclerView) RecyclerView recyclerView;
     @BindView(R.id.seeAll) RelativeLayout seeAllLayout;
+    @BindView(R.id.kotlinButton) Button kotlinButton;
     private MyFriendsSmallCellAdapter recyclerViewAdapter;
 
     @Override
@@ -48,6 +52,12 @@ public class MainActivity extends BasicActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(view.getContext(), FriendsListActivity.class));
+            }
+        });
+        kotlinButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), KotlinActivity.class));
             }
         });
     }

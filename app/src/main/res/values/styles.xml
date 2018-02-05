@@ -30,4 +30,10 @@
         <item name="android:layout_height">1dp</item>
     </style>
 
+    <style name="customButtons" parent="customTextViewsLight">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:background">@drawable/cell_background</item>
+    </style>
+
 </resources>
