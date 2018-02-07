@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="io.moku.davide.sideproject"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.moku.davide.sideproject" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_LOGS" />
@@ -13,8 +13,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,8 +36,11 @@
         <activity
             android:name=".programmingLanguages.ProgrammingLanguagesActivity"
             android:label="@string/allProgrammingLanguages" />
-        <activity android:name=".kotlin.KotlinActivity"
-            android:label="@string/kotlin"/>
+        <activity
+            android:name=".kotlin.KotlinActivity"
+            android:label="@string/kotlin" />
+        <activity android:name=".kotlin.KotlinProgrammingLanguagesActivity" >
+        </activity>
     </application>
 
 </manifest>

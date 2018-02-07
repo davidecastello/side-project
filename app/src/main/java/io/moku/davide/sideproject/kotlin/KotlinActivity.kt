@@ -8,15 +8,9 @@ import io.moku.davide.sideproject.R
 import io.moku.davide.sideproject.R.layout.activity_kotlin
 import io.moku.davide.sideproject.model.User
 import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity
-import io.moku.davide.sideproject.utils.realm.RealmUtils
-import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_kotlin.*
 import java.util.*
-import java.util.function.Consumer
-import kotlin.reflect.KClass
-import kotlin.reflect.KProperty1
-import kotlin.reflect.full.declaredMemberProperties
-import kotlin.reflect.full.memberProperties
+import kotlin.collections.HashMap
 
 
 /**
@@ -57,7 +51,7 @@ class KotlinActivity : BasicSecondaryActivity() {
 
         /* Retrieve Intent */
         message.text = intent.getStringExtra(EXTRA_MSG) ?: getString(R.string.no_message_yet)
-        button.setOnClickListener { startActivity(KotlinActivityIntent(getString(R.string.test_message))) }
+        button.setOnClickListener { startActivity(KotlinProgrammingLanguagesActivityIntent()) }
 
         /* Test default and named arguments */
         val davide = Developer(name = "Davide Castello", age = 23, yearsOfExperience = 2, profile = "Android Developer");
@@ -127,15 +121,39 @@ class KotlinActivity : BasicSecondaryActivity() {
             if ((this.year < other.year) or (this.month < other.month) or (this.dayOfMonth < other.dayOfMonth)) return -1
             else return 1
         }
+
+        fun toMillis(): Long {
+            val c = Calendar.getInstance()
+            c.set(year, month, dayOfMonth, 0, 0, 0)
+            c.set(Calendar.MILLISECOND, 0)
+            return c.getTimeInMillis()
+        }
     }
 
+    /* Fold test */
+    fun test() {
+        listOf(1, 3, -4, 2, -11).partition { it > 0 }
+        val list = listOf(1, 2, 3, 4)
+        list.fold(list.first(), operation = {
+            partProduct, element ->
+            element * partProduct
+        }).toString()
+    }
 
-
-
-
-
-
-
+    /* Parameter of type extension function */
+    fun buildMap(build: HashMap<Int, String>.() -> Unit): HashMap<Int, String> {
+        val map = HashMap<Int, String>()
+        map.build()
+        return map
+    }
+    fun usage(): Map<Int, String> {
+        return buildMap {
+            put(0, "0")
+            for (i in 1..10) {
+                put(i, "$i")
+            }
+        }
+    }
 
 
 
