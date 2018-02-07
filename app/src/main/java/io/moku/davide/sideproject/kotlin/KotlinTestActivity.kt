@@ -3,7 +3,6 @@ package io.moku.davide.sideproject.kotlin
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.annotation.Nullable
 import android.util.Log
 import io.moku.davide.sideproject.R
 import io.moku.davide.sideproject.R.layout.activity_kotlin
@@ -18,22 +17,22 @@ import kotlin.collections.HashMap
  * Intent to start this Activity
  *
  * - Java usage:
- *      startActivity(KotlinActivityKt.KotlinActivityIntent(this, getString(R.string.test_message)));
+ *      startActivity(KotlinTestActivityKt.KotlinActivityIntent(this, getString(R.string.test_message)));
  * - Kotlin usage:
  *      startActivity(KotlinActivityIntent(getString(R.string.test_message)))
  */
 fun Context.KotlinActivityIntent(msg: String?): Intent {
-    return Intent(this, KotlinActivity::class.java).apply {
-        putExtra(KotlinActivity.EXTRA_MSG, msg)
+    return Intent(this, KotlinTestActivity::class.java).apply {
+        putExtra(KotlinTestActivity.EXTRA_MSG, msg)
     }
 }
 
-class KotlinActivity : BasicSecondaryActivity() {
+class KotlinTestActivity : BasicSecondaryActivity() {
 
     /* Static Fields */
     companion object {
         const val EXTRA_MSG = "extra_msg"
-        @JvmField val TAG : String? = KotlinActivity::class.simpleName
+        @JvmField val TAG : String? = KotlinTestActivity::class.simpleName
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

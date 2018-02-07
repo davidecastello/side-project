@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 import io.moku.davide.sideproject.R;
 import io.moku.davide.sideproject.model.UsedProgrammingLanguage;
 import io.moku.davide.sideproject.model.User;
-import io.moku.davide.sideproject.programmingLanguages.KotlinProgrammingLanguagesActivityKt;
+import io.moku.davide.sideproject.programmingLanguages.ProgrammingLanguagesActivityKt;
 import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity;
 import io.realm.RealmList;
 
@@ -54,7 +54,7 @@ public class UserInformationActivity extends BasicSecondaryActivity {
         seeAllLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(KotlinProgrammingLanguagesActivityKt.KotlinProgrammingLanguagesActivityIntent(view.getContext()));
+                startActivity(ProgrammingLanguagesActivityKt.ProgrammingLanguagesActivityIntent(view.getContext()));
             }
         });
     }

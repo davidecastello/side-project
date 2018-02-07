@@ -6,18 +6,18 @@ import android.os.Bundle
 import io.moku.davide.sideproject.R
 import io.moku.davide.sideproject.model.ProgrammingLanguage
 import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity
-import io.moku.davide.sideproject.utils.gridView.KotlinProgrammingLanguagesAdapter
+import io.moku.davide.sideproject.utils.gridView.ProgrammingLanguagesAdapter
 import io.moku.davide.sideproject.utils.gridView.ProgrammingLanguageUsage
 import kotlinx.android.synthetic.main.activity_kotlin_programming_languages.*
 
-fun Context.KotlinProgrammingLanguagesActivityIntent(): Intent {
-    return Intent(this, KotlinProgrammingLanguagesActivity::class.java)
-    /*return Intent(this, KotlinProgrammingLanguagesActivityIntent()::class.java).apply {
-        putExtra(KotlinProgrammingLanguagesActivity.EXTRA_MSG, msg)
+fun Context.ProgrammingLanguagesActivityIntent(): Intent {
+    return Intent(this, ProgrammingLanguagesActivity::class.java)
+    /*return Intent(this, ProgrammingLanguagesActivityIntent()::class.java).apply {
+        putExtra(ProgrammingLanguagesActivity.EXTRA_MSG, msg)
     }*/
 }
 
-class KotlinProgrammingLanguagesActivity : BasicSecondaryActivity() {
+class ProgrammingLanguagesActivity : BasicSecondaryActivity() {
 
     private val adapter by lazy { setupAdapter() }
 
@@ -29,8 +29,8 @@ class KotlinProgrammingLanguagesActivity : BasicSecondaryActivity() {
         programmingLanguagesGridView.adapter = adapter
     }
 
-    private fun setupAdapter(): KotlinProgrammingLanguagesAdapter
-            = KotlinProgrammingLanguagesAdapter(this, ProgrammingLanguage.getAllLanguages()
+    private fun setupAdapter(): ProgrammingLanguagesAdapter
+            = ProgrammingLanguagesAdapter(this, ProgrammingLanguage.getAllLanguages()
             .map { it -> ProgrammingLanguageUsage(it, it.usage) }
             .sortedByDescending { it.people })
 }

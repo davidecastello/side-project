@@ -7,17 +7,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.moku.davide.sideproject.kotlin.KotlinActivity;
-import io.moku.davide.sideproject.kotlin.KotlinActivityKt;
+import io.moku.davide.sideproject.kotlin.KotlinTestActivityKt;
 import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.myFriends.FriendsListActivity;
-import io.moku.davide.sideproject.profile.ProfileActivity;
 import io.moku.davide.sideproject.utils.Constants;
 import io.moku.davide.sideproject.utils.activity.BasicActivity;
 import io.moku.davide.sideproject.utils.recyclerView.MyFriendsSmallCellAdapter;
@@ -57,7 +52,7 @@ public class MainActivity extends BasicActivity {
         kotlinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(KotlinActivityKt.KotlinActivityIntent(v.getContext(), null));
+                startActivity(KotlinTestActivityKt.KotlinActivityIntent(v.getContext(), null));
             }
         });
     }

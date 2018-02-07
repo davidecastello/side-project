@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.programming_language_cell_layout.view.*
  * Project: side-project
  * Copyright © 2018 Moku S.r.l. All rights reserved.
  */
-class KotlinProgrammingLanguagesAdapter(val context: Context, val languageUsages: List<ProgrammingLanguageUsage>) : BaseAdapter() {
+class ProgrammingLanguagesAdapter(val context: Context, val languageUsages: List<ProgrammingLanguageUsage>) : BaseAdapter() {
 
     val inflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
