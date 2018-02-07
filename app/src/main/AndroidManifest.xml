@@ -32,11 +32,13 @@
             android:label="@string/info" />
         <activity android:name=".utils.activity.BasicActivity" />
         <activity android:name=".utils.activity.BasicSecondaryActivity" />
-        <activity android:name=".profile.DisplayPhotoActivity" />
+        <activity android:name=".profile.DisplayUserPhotoActivity" />
         <activity
             android:name=".kotlin.KotlinTestActivity"
             android:label="@string/kotlin" />
         <activity android:name=".programmingLanguages.ProgrammingLanguagesActivity" >
+        </activity>
+        <activity android:name=".utils.assets.DisplayFullPhotoActivity" >
         </activity>
     </application>
 

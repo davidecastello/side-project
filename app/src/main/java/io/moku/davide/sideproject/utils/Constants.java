@@ -15,4 +15,7 @@ public class Constants {
 
     // Number of friends shown in homepage
     public static final int NUMBER_OF_FRIENDS_IN_HOMEPAGE = 3;
+
+    // Post
+    public static final String POST_PREFERRED_DATE_FORMAT = "d MMM, HH:mm";
 }

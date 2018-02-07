@@ -49,9 +49,7 @@ public class MyFriendsSmallCellAdapter extends RecyclerView.Adapter<MyFriendsSma
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(view.getContext(), ProfileActivity.class);
-                intent.putExtra(User.EXTRA_USER_ID, currentUser.getId());
-                view.getContext().startActivity(intent);
+                view.getContext().startActivity(ProfileActivity.newIntent(view.getContext(), currentUser.getId()));
             }
         });
         currentUser.loadProfilePicture(context, holder.imageView);

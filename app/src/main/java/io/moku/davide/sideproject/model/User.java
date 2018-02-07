@@ -3,6 +3,7 @@ package io.moku.davide.sideproject.model;
 import com.google.gson.annotations.SerializedName;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -135,6 +136,14 @@ public class User extends RealmObject {
     }
 
     public void loadBackgroundCover(Context context, ImageView imageView) {
-        ImagesUtils.loadUrlIntoImageView(backgroundCoverUrl, context, imageView, R.drawable.pattern);
+        ImagesUtils.loadUrlIntoImageView(backgroundCoverUrl, context, imageView, R.drawable.no_background_cover, false);
+    }
+
+    public boolean isValidProfilePictureUrl() { return isValidUrl(profilePictureUrl); }
+
+    public boolean isValidBackgroundCoverUrl() { return isValidUrl(backgroundCoverUrl); }
+
+    private boolean isValidUrl(String url) {
+        return !TextUtils.isEmpty(url);
     }
 }

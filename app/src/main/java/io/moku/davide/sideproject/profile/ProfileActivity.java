@@ -1,6 +1,6 @@
 package io.moku.davide.sideproject.profile;
 
-import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +13,7 @@ import io.moku.davide.sideproject.R;
 import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.network.asynctasks.AsyncAddFriend;
 import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity;
+import io.moku.davide.sideproject.utils.assets.DisplayFullPhotoActivity;
 
 public class ProfileActivity extends BasicSecondaryActivity {
 
@@ -41,6 +42,12 @@ public class ProfileActivity extends BasicSecondaryActivity {
         updateView();
     }
 
+    public static Intent newIntent(Context context, int userId) {
+        Intent intent = new Intent(context, ProfileActivity.class);
+        intent.putExtra(User.EXTRA_USER_ID, userId);
+        return intent;
+    }
+
     private void setListeners() {
         firstAction.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,8 +63,22 @@ public class ProfileActivity extends BasicSecondaryActivity {
                 startActivity(intent);
             }
         });
-        profilePicture.setOnClickListener(new OnPhotoClickListener(user.getId(), true));
-        backgroundCover.setOnClickListener(new OnPhotoClickListener(user.getId(), false));
+        if (user.isValidProfilePictureUrl()) {
+            profilePicture.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(DisplayUserPhotoActivity.newIntent(v.getContext(), user.getId()));
+                }
+            });
+        }
+        if (user.isValidBackgroundCoverUrl()) {
+            backgroundCover.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(DisplayFullPhotoActivity.newIntent(v.getContext(), user.getBackgroundCoverUrl(), user.getName()));
+                }
+            });
+        }
     }
 
     private void addFriend() {
@@ -73,24 +94,5 @@ public class ProfileActivity extends BasicSecondaryActivity {
         name.setText(user.getName());
         user.loadProfilePicture(this, profilePicture);
         user.loadBackgroundCover(this, backgroundCover);
-    }
-
-    public class OnPhotoClickListener implements View.OnClickListener {
-
-        private int userId;
-        private boolean isProfilePicture;
-
-        public OnPhotoClickListener(int userId, boolean isProfilePicture) {
-            this.userId = userId;
-            this.isProfilePicture = isProfilePicture;
-        }
-
-        @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(view.getContext(), DisplayPhotoActivity.class);
-            intent.putExtra(User.EXTRA_USER_ID, userId);
-            intent.putExtra(DisplayPhotoActivity.IS_PROFILE_PICTURE, isProfilePicture);
-            startActivity(intent);
-        }
     }
 }

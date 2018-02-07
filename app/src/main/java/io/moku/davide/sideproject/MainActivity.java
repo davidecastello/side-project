@@ -7,8 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.RelativeLayout;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,14 +18,19 @@ import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.myFriends.FriendsListActivity;
 import io.moku.davide.sideproject.utils.Constants;
 import io.moku.davide.sideproject.utils.activity.BasicActivity;
+import io.moku.davide.sideproject.utils.recyclerView.LatestPostsAdapter;
 import io.moku.davide.sideproject.utils.recyclerView.MyFriendsSmallCellAdapter;
+import io.moku.davide.sideproject.utils.recyclerView.Post;
 
 public class MainActivity extends BasicActivity {
 
     public static final String TAG = MainActivity.class.getSimpleName();
-    @BindView(R.id.recyclerView) RecyclerView recyclerView;
-    @BindView(R.id.seeAll) RelativeLayout seeAllLayout;
-    private MyFriendsSmallCellAdapter recyclerViewAdapter;
+    // Friends List
+    @BindView(R.id.friendsRecyclerView) RecyclerView friendsRV;
+    @BindView(R.id.seeAllFriends) RelativeLayout seeAllLayout;
+    private MyFriendsSmallCellAdapter friendsAdapter;
+    // Latest posts
+    @BindView(R.id.latestPostsRecyclerView) RecyclerView latestPostsRV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +44,14 @@ public class MainActivity extends BasicActivity {
     }
 
     private void setupViews() {
-        recyclerViewAdapter = new MyFriendsSmallCellAdapter(this, User.getAllUsers().subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
-        recyclerView.setAdapter(recyclerViewAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        friendsAdapter = new MyFriendsSmallCellAdapter(this, User.getAllUsers().subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
+        friendsRV.setAdapter(friendsAdapter);
+        friendsRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+
+
+        LatestPostsAdapter latestPostsAdapter = new LatestPostsAdapter(this, Post.Companion.getLatestPosts());
+        latestPostsRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        latestPostsRV.setAdapter(latestPostsAdapter);
     }
 
     private void setListeners() {
@@ -63,4 +74,5 @@ public class MainActivity extends BasicActivity {
         if (item.getItemId() == R.id.itemKotlin) startActivity(KotlinTestActivityKt.KotlinActivityIntent(this, null));
         return true;
     }
+
 }
