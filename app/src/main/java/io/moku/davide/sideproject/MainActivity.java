@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -22,7 +24,6 @@ public class MainActivity extends BasicActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
     @BindView(R.id.recyclerView) RecyclerView recyclerView;
     @BindView(R.id.seeAll) RelativeLayout seeAllLayout;
-    @BindView(R.id.kotlinButton) Button kotlinButton;
     private MyFriendsSmallCellAdapter recyclerViewAdapter;
 
     @Override
@@ -49,11 +50,17 @@ public class MainActivity extends BasicActivity {
                 startActivity(new Intent(view.getContext(), FriendsListActivity.class));
             }
         });
-        kotlinButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(KotlinTestActivityKt.KotlinActivityIntent(v.getContext(), null));
-            }
-        });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.itemKotlin) startActivity(KotlinTestActivityKt.KotlinActivityIntent(this, null));
+        return true;
     }
 }
