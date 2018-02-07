@@ -34,12 +34,9 @@
         <activity android:name=".utils.activity.BasicSecondaryActivity" />
         <activity android:name=".profile.DisplayPhotoActivity" />
         <activity
-            android:name=".programmingLanguages.ProgrammingLanguagesActivity"
-            android:label="@string/allProgrammingLanguages" />
-        <activity
             android:name=".kotlin.KotlinActivity"
             android:label="@string/kotlin" />
-        <activity android:name=".kotlin.KotlinProgrammingLanguagesActivity" >
+        <activity android:name=".programmingLanguages.KotlinProgrammingLanguagesActivity" >
         </activity>
     </application>
 

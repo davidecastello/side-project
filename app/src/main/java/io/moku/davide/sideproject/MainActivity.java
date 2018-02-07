@@ -57,7 +57,7 @@ public class MainActivity extends BasicActivity {
         kotlinButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(KotlinActivityKt.KotlinActivityIntent(v.getContext(), getString(R.string.test_message)));
+                startActivity(KotlinActivityKt.KotlinActivityIntent(v.getContext(), null));
             }
         });
     }

@@ -1,4 +1,4 @@
-package io.moku.davide.sideproject.kotlin
+package io.moku.davide.sideproject.programmingLanguages
 
 import android.content.Context
 import android.content.Intent
@@ -6,6 +6,7 @@ import android.os.Bundle
 import io.moku.davide.sideproject.R
 import io.moku.davide.sideproject.model.ProgrammingLanguage
 import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity
+import io.moku.davide.sideproject.utils.gridView.KotlinProgrammingLanguagesAdapter
 import io.moku.davide.sideproject.utils.gridView.ProgrammingLanguageUsage
 import kotlinx.android.synthetic.main.activity_kotlin_programming_languages.*
 

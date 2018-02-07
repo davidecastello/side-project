@@ -3,6 +3,7 @@ package io.moku.davide.sideproject.kotlin
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.support.annotation.Nullable
 import android.util.Log
 import io.moku.davide.sideproject.R
 import io.moku.davide.sideproject.R.layout.activity_kotlin
@@ -21,7 +22,7 @@ import kotlin.collections.HashMap
  * - Kotlin usage:
  *      startActivity(KotlinActivityIntent(getString(R.string.test_message)))
  */
-fun Context.KotlinActivityIntent(msg: String): Intent {
+fun Context.KotlinActivityIntent(msg: String?): Intent {
     return Intent(this, KotlinActivity::class.java).apply {
         putExtra(KotlinActivity.EXTRA_MSG, msg)
     }
@@ -51,7 +52,7 @@ class KotlinActivity : BasicSecondaryActivity() {
 
         /* Retrieve Intent */
         message.text = intent.getStringExtra(EXTRA_MSG) ?: getString(R.string.no_message_yet)
-        button.setOnClickListener { startActivity(KotlinProgrammingLanguagesActivityIntent()) }
+        button.setOnClickListener { startActivity(KotlinActivityIntent(getString(R.string.test_message))) }
 
         /* Test default and named arguments */
         val davide = Developer(name = "Davide Castello", age = 23, yearsOfExperience = 2, profile = "Android Developer");

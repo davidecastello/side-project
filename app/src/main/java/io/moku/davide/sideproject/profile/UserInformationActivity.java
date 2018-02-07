@@ -1,6 +1,5 @@
 package io.moku.davide.sideproject.profile;
 
-import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.os.Bundle;
@@ -19,7 +18,7 @@ import butterknife.ButterKnife;
 import io.moku.davide.sideproject.R;
 import io.moku.davide.sideproject.model.UsedProgrammingLanguage;
 import io.moku.davide.sideproject.model.User;
-import io.moku.davide.sideproject.programmingLanguages.ProgrammingLanguagesActivity;
+import io.moku.davide.sideproject.programmingLanguages.KotlinProgrammingLanguagesActivityKt;
 import io.moku.davide.sideproject.utils.activity.BasicSecondaryActivity;
 import io.realm.RealmList;
 
@@ -55,7 +54,7 @@ public class UserInformationActivity extends BasicSecondaryActivity {
         seeAllLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(view.getContext(), ProgrammingLanguagesActivity.class));
+                startActivity(KotlinProgrammingLanguagesActivityKt.KotlinProgrammingLanguagesActivityIntent(view.getContext()));
             }
         });
     }

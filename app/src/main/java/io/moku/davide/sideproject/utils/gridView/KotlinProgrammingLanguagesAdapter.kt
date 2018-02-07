@@ -1,14 +1,11 @@
-package io.moku.davide.sideproject.kotlin
+package io.moku.davide.sideproject.utils.gridView
 
 import android.content.Context
-import android.view.ContextMenu
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import io.moku.davide.sideproject.R
-import io.moku.davide.sideproject.utils.gridView.ProgrammingLanguageUsage
-import kotlinx.android.synthetic.main.programming_language_cell_layout.*
 import kotlinx.android.synthetic.main.programming_language_cell_layout.view.*
 
 /**
