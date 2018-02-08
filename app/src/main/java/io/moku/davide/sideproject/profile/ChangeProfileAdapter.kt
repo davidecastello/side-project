@@ -17,10 +17,19 @@ import kotlinx.android.synthetic.main.profile_cell_layout.view.*
  * Copyright © 2018 Moku S.r.l. All rights reserved.
  */
 
-class ChangeProfileAdapter(val context: Context, var users: List<User>, var selectedUserId: Int)
-    : RecyclerView.Adapter<ChangeProfileAdapter.ProfileViewHolder>() {
+class ChangeProfileAdapter(val _context: Context, val layoutResourceId : Int, var users: List<User>)
+    : ArrayAdapter<User>(_context, layoutResourceId, users) {
 
-    override fun getItemCount(): Int = users.size
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+
+        val view = convertView ?: (_context as Activity).layoutInflater.inflate(layoutResourceId, parent, false)
+        val user = users.get(position)
+        view.profileNameCheckedTV.text = user.name
+        user.loadProfilePicture(_context, view.profilePic)
+        return view
+    }
+
+    /*override fun getItemCount(): Int = users.size
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ProfileViewHolder
             = ProfileViewHolder(LayoutInflater.from(context).inflate(R.layout.profile_cell_layout, parent, false))
@@ -44,5 +53,5 @@ class ChangeProfileAdapter(val context: Context, var users: List<User>, var sele
         } }
     }
 
-    class ProfileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    class ProfileViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)*/
 }
