@@ -1,5 +1,6 @@
 package io.moku.davide.sideproject;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,6 +17,7 @@ import butterknife.ButterKnife;
 import io.moku.davide.sideproject.kotlin.KotlinTestActivityKt;
 import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.myFriends.FriendsListActivity;
+import io.moku.davide.sideproject.profile.ChangeProfileActivityKt;
 import io.moku.davide.sideproject.profile.ProfileActivity;
 import io.moku.davide.sideproject.utils.Constants;
 import io.moku.davide.sideproject.utils.activity.BasicActivity;
@@ -46,17 +48,30 @@ public class MainActivity extends BasicActivity {
         setupViews();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        updateView();
+    }
+
     private void setupViews() {
+        /* FRIENDS */
         // Show only the first {@link #Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE} friends of the logged user
         friendsAdapter = new MyFriendsSmallCellAdapter(this,
                 User.getLoggedUserFriends(this).subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
         friendsRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         friendsRV.setAdapter(friendsAdapter);
-
-
+        /* POSTS */
         latestPostsAdapter = new LatestPostsAdapter(this, Post.Companion.getLatestPosts());
         latestPostsRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         latestPostsRV.setAdapter(latestPostsAdapter);
+    }
+
+    public void updateView() {
+        /* FRIENDS */
+        friendsAdapter.setUsers(User.getLoggedUserFriends(this).subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
+        friendsAdapter.notifyDataSetChanged();
     }
 
     private void setListeners() {
@@ -84,7 +99,7 @@ public class MainActivity extends BasicActivity {
                 startActivity(KotlinTestActivityKt.KotlinActivityIntent(this, null));
                 return true;
             case R.id.itemChangeProfile:
-                // TODO
+                startActivity(ChangeProfileActivityKt.ChangeProfileActivityIntent(this, PreferencesManager.getLoggedUserId(this)));
                 return true;
             default:
                 super.onOptionsItemSelected(item);

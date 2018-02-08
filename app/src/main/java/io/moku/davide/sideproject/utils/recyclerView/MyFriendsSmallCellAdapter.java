@@ -36,6 +36,10 @@ public class MyFriendsSmallCellAdapter extends RecyclerView.Adapter<MyFriendsSma
         this.users = users;
     }
 
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
     @Override
     public SmallCellViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new SmallCellViewHolder(LayoutInflater.from(context).inflate(R.layout.my_friends_small_cell_layout, parent, false));

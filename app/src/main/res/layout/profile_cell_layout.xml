@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout android:id="@+id/profileCellLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|start"
+        android:padding="16dp"
+        android:background="?android:selectableItemBackground">
+
+        <com.pkmmte.view.CircularImageView
+            android:id="@+id/profilePic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/example_personalInfo"
+            android:src="@drawable/boy" />
+
+        <CheckedTextView
+            android:id="@+id/profileNameCheckedTV"
+            style="@style/customTextViewsBold"
+            android:layout_width="match_parent"
+            android:checkMark="@drawable/ic_checked"
+            android:checked="false"
+            android:text="@string/example_name"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</LinearLayout>

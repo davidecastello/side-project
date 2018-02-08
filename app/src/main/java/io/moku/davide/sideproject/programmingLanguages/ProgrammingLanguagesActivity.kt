@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_kotlin_programming_languages.*
 
 fun Context.ProgrammingLanguagesActivityIntent(): Intent {
     return Intent(this, ProgrammingLanguagesActivity::class.java)
-    /*return Intent(this, ProgrammingLanguagesActivityIntent()::class.java).apply {
+    /*return Intent(this, ProgrammingLanguagesActivity::class.java).apply {
         putExtra(ProgrammingLanguagesActivity.EXTRA_MSG, msg)
     }*/
 }
