@@ -24,7 +24,7 @@
             android:id="@+id/profileNameCheckedTV"
             style="@style/customTextViewsBold"
             android:layout_width="match_parent"
-            android:checkMark="@drawable/ic_checked"
+            android:checkMark="@drawable/checkbox"
             android:checked="false"
             android:text="@string/example_name"
             android:textSize="14sp" />
