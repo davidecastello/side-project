@@ -16,6 +16,7 @@ import butterknife.ButterKnife;
 import io.moku.davide.sideproject.kotlin.KotlinTestActivityKt;
 import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.myFriends.FriendsListActivity;
+import io.moku.davide.sideproject.profile.ProfileActivity;
 import io.moku.davide.sideproject.utils.Constants;
 import io.moku.davide.sideproject.utils.activity.BasicActivity;
 import io.moku.davide.sideproject.utils.preferences.PreferencesManager;
@@ -47,7 +48,7 @@ public class MainActivity extends BasicActivity {
     private void setupViews() {
         // Show only the first {@link #Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE} friends of the logged user
         friendsAdapter = new MyFriendsSmallCellAdapter(this,
-                User.getLoggedUserFriends().subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
+                User.getLoggedUserFriends(this).subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
         friendsRV.setAdapter(friendsAdapter);
         friendsRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
@@ -74,8 +75,20 @@ public class MainActivity extends BasicActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.itemKotlin) startActivity(KotlinTestActivityKt.KotlinActivityIntent(this, null));
-        return true;
+        switch (item.getItemId()) {
+            case R.id.itemProfile:
+                startActivity(ProfileActivity.newIntent(this, PreferencesManager.getLoggedUserId(this)));
+                return true;
+            case R.id.itemKotlin:
+                startActivity(KotlinTestActivityKt.KotlinActivityIntent(this, null));
+                return true;
+            case R.id.itemChangeProfile:
+                // TODO
+                return true;
+            default:
+                super.onOptionsItemSelected(item);
+                return true;
+        }
     }
 
 }

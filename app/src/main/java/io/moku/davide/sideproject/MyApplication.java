@@ -2,6 +2,8 @@ package io.moku.davide.sideproject;
 
 import android.app.Application;
 
+import io.moku.davide.sideproject.model.User;
+import io.moku.davide.sideproject.utils.preferences.PreferencesManager;
 import io.moku.davide.sideproject.utils.realm.RealmUtils;
 
 /**
@@ -19,6 +21,8 @@ public class MyApplication extends Application {
         RealmUtils.initialize(this);
         RealmUtils.loadDB(getApplicationContext());
         RealmUtils.onCreateApplication();
+
+        PreferencesManager.storeLoggedUserId(this, User.getAllUsers().get(0).getId());
     }
 
     @Override

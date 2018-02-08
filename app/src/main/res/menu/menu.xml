@@ -2,7 +2,12 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:id="@+id/itemProfile"
+        android:title="@string/profile" />
+    <item
         android:id="@+id/itemKotlin"
-        android:title="@string/kotlin"
-        app:showAsAction="ifRoom" />
+        android:title="@string/kotlin" />
+    <item
+        android:id="@+id/itemChangeProfile"
+        android:title="@string/change_profile"/>
 </menu>

@@ -31,7 +31,7 @@ public class FriendsListActivity extends BasicSecondaryActivity implements OnPag
     }
 
     private void setupViews() {
-        recyclerViewAdapter = new MyFriendsBigCellAdapter(this, User.getLoggedUserFriends());
+        recyclerViewAdapter = new MyFriendsBigCellAdapter(this, User.getLoggedUserFriends(this));
         recyclerView.setAdapter(recyclerViewAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         pagerIndicator.attachToRecyclerView(recyclerView);

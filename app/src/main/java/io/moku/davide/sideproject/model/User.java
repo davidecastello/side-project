@@ -113,8 +113,8 @@ public class User extends RealmObject {
         return users;
     }
 
-    public static RealmResults<User> getLoggedUserFriends() {
-        return getUser(PreferencesManager.getLoggedUserId()).getFriends();
+    public static RealmResults<User> getLoggedUserFriends(Context context) {
+        return getUser(PreferencesManager.getLoggedUserId(context)).getFriends();
     }
 
     public static User getUser(int userId) {

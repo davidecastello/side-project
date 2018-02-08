@@ -33,7 +33,7 @@ public class PagerNumberPickerDialogPreference extends DialogFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RealmResults<User> friends = User.getLoggedUserFriends();
+        RealmResults<User> friends = User.getLoggedUserFriends(getActivity());
         MAX_PAGES = (friends != null && friends.size() != 0) ? friends.size() : 0;
         preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
     }

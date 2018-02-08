@@ -58,7 +58,7 @@ class LatestPostsAdapter(val context: Context, var posts: List<Post>) : Recycler
                 .setSpeed(0.5f)
                 .show()
         // share post
-        posts = posts.plus(Post(user = User.getUser(PreferencesManager.getLoggedUserId()),
+        posts = posts.plus(Post(user = User.getUser(PreferencesManager.getLoggedUserId(context)),
                                 timestamp = DateUtils.getCurrentTimestamp(),
                                 photoUrl = post.photoUrl))
                 .sortedByDescending { it.timestamp }
