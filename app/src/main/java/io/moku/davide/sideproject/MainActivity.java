@@ -33,6 +33,7 @@ public class MainActivity extends BasicActivity {
     private MyFriendsSmallCellAdapter friendsAdapter;
     // Latest posts
     @BindView(R.id.latestPostsRecyclerView) RecyclerView latestPostsRV;
+    private LatestPostsAdapter latestPostsAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +50,11 @@ public class MainActivity extends BasicActivity {
         // Show only the first {@link #Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE} friends of the logged user
         friendsAdapter = new MyFriendsSmallCellAdapter(this,
                 User.getLoggedUserFriends(this).subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
-        friendsRV.setAdapter(friendsAdapter);
         friendsRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        friendsRV.setAdapter(friendsAdapter);
 
 
-        LatestPostsAdapter latestPostsAdapter = new LatestPostsAdapter(this, Post.Companion.getLatestPosts());
+        latestPostsAdapter = new LatestPostsAdapter(this, Post.Companion.getLatestPosts());
         latestPostsRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         latestPostsRV.setAdapter(latestPostsAdapter);
     }
