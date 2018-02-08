@@ -35,6 +35,10 @@ class LatestPostsAdapter(val context: Context, val posts: List<Post>) : Recycler
         // listeners
         view?.postInfoLayout?.setOnClickListener { v -> v.context.startActivity(ProfileActivity.newIntent(v.context, post.user.id)) }
         view?.postPhoto?.setOnClickListener { v -> v.context.startActivity(DisplayFullPhotoActivity.newIntent(v.context, post.photoUrl)) }
+        view?.postLikeButton?.setOnClickListener({
+            post.likes++
+            view.postLikes?.text = post.getLikesString(view.context)
+        })
     }
 
 
