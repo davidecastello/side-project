@@ -18,6 +18,7 @@ import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.myFriends.FriendsListActivity;
 import io.moku.davide.sideproject.utils.Constants;
 import io.moku.davide.sideproject.utils.activity.BasicActivity;
+import io.moku.davide.sideproject.utils.preferences.PreferencesManager;
 import io.moku.davide.sideproject.utils.recyclerView.LatestPostsAdapter;
 import io.moku.davide.sideproject.utils.recyclerView.MyFriendsSmallCellAdapter;
 import io.moku.davide.sideproject.utils.recyclerView.Post;
@@ -44,7 +45,9 @@ public class MainActivity extends BasicActivity {
     }
 
     private void setupViews() {
-        friendsAdapter = new MyFriendsSmallCellAdapter(this, User.getAllUsers().subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
+        // Show only the first {@link #Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE} friends of the logged user
+        friendsAdapter = new MyFriendsSmallCellAdapter(this,
+                User.getLoggedUserFriends().subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
         friendsRV.setAdapter(friendsAdapter);
         friendsRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 

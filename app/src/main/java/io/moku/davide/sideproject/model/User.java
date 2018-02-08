@@ -12,6 +12,7 @@ import java.util.List;
 import io.moku.davide.sideproject.R;
 import io.moku.davide.sideproject.utils.assets.AssetsUtils;
 import io.moku.davide.sideproject.utils.assets.ImagesUtils;
+import io.moku.davide.sideproject.utils.preferences.PreferencesManager;
 import io.moku.davide.sideproject.utils.realm.RealmUtils;
 import io.realm.Realm;
 import io.realm.RealmList;
@@ -112,6 +113,10 @@ public class User extends RealmObject {
         return users;
     }
 
+    public static RealmResults<User> getLoggedUserFriends() {
+        return getUser(PreferencesManager.getLoggedUserId()).getFriends();
+    }
+
     public static User getUser(int userId) {
         Realm realm = null;
         User user = null;
@@ -129,6 +134,22 @@ public class User extends RealmObject {
             }
         }
         return user;
+    }
+
+    public RealmResults<User> getFriends() {
+        Realm realm = null;
+        RealmResults<User> users = null;
+        try {
+            realm = RealmUtils.getCurrentRealm();
+            users = realm.where(User.class).notEqualTo("id", id).findAll();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (realm != null && !realm.isClosed()) {
+                realm.close();
+            }
+        }
+        return users;
     }
 
     public void loadProfilePicture(Context context, ImageView imageView) {
