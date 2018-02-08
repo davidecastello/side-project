@@ -105,11 +105,11 @@
             android:text="@string/like" />
 
         <Button
-            android:id="@+id/postCommentButton"
+            android:id="@+id/postShareButton"
             style="@style/customPostButtons"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="@string/comment" />
+            android:text="@string/share" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

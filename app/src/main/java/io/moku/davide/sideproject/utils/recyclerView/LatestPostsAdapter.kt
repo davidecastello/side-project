@@ -1,14 +1,19 @@
 package io.moku.davide.sideproject.utils.recyclerView
 
+import android.app.Activity
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import io.moku.davide.sideproject.R
+import io.moku.davide.sideproject.model.User
 import io.moku.davide.sideproject.profile.DisplayUserPhotoActivity
 import io.moku.davide.sideproject.profile.ProfileActivity
+import io.moku.davide.sideproject.utils.alerts.ProgressDialogHelper
 import io.moku.davide.sideproject.utils.assets.DisplayFullPhotoActivity
+import io.moku.davide.sideproject.utils.datetime.DateUtils
+import io.moku.davide.sideproject.utils.preferences.PreferencesManager
 import kotlinx.android.synthetic.main.post_cell_layout.view.*
 
 /**
@@ -16,7 +21,7 @@ import kotlinx.android.synthetic.main.post_cell_layout.view.*
  * Project: side-project
  * Copyright © 2018 Moku S.r.l. All rights reserved.
  */
-class LatestPostsAdapter(val context: Context, val posts: List<Post>) : RecyclerView.Adapter<LatestPostsAdapter.PostViewHolder>() {
+class LatestPostsAdapter(val context: Context, var posts: List<Post>) : RecyclerView.Adapter<LatestPostsAdapter.PostViewHolder>() {
 
     override fun getItemCount(): Int = posts.size
 
@@ -39,8 +44,29 @@ class LatestPostsAdapter(val context: Context, val posts: List<Post>) : Recycler
             post.likes++
             view.postLikes?.text = post.getLikesString(view.context)
         })
+        view?.postShareButton?.setOnClickListener({
+            sharePost(post)
+        })
     }
 
+    fun sharePost(post: Post) {
+        // prepare dialog
+        val helper = ProgressDialogHelper.Builder(context as Activity)
+                .setInitalMsg(context.getString(R.string.operation_running))
+                .setDoneMsg(context.getString(R.string.post_shared))
+                .setAnimationName("check_done.json")
+                .setSpeed(0.5f)
+                .show()
+        // share post
+        posts = posts.plus(Post(user = User.getUser(PreferencesManager.getLoggedUserId()),
+                                timestamp = DateUtils.getCurrentTimestamp(),
+                                photoUrl = post.photoUrl))
+                .sortedByDescending { it.timestamp }
+        // notify adapter
+        notifyItemInserted(0)
+        // show animation "Post shared!"
+        helper.done()
+    }
 
     class PostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }

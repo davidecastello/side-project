@@ -48,4 +48,5 @@
     <string name="likes">%d Mi piace</string>
     <string name="comment">Commenta</string>
     <string name="see_photo">Visualizza foto</string>
+    <string name="post_shared">Post condiviso!</string>
 </resources>
