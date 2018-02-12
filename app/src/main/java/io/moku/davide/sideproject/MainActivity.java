@@ -57,7 +57,7 @@ public class MainActivity extends BasicActivity {
 
     private void setupViews() {
         /* FRIENDS */
-        // Show only the first {@link #Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE} friends of the logged user
+        /** Show only the first {@link Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE} friends of the logged user */
         friendsAdapter = new MyFriendsSmallCellAdapter(this,
                 User.getLoggedUserFriends(this).subList(0, Constants.NUMBER_OF_FRIENDS_IN_HOMEPAGE));
         friendsRV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

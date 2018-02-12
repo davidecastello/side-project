@@ -101,22 +101,10 @@ public class UserTypeAdapter extends TypeAdapter<User> {
         RealmList<UsedProgrammingLanguage> usedProgrammingLanguages = new RealmList<>();
         in.beginArray();
         while (in.hasNext()) {
-
             UsedProgrammingLanguage language = retrieveUsedProgrammingLanguage(realm, in);
             if (language != null) {
                 usedProgrammingLanguages.add(language);
             }
-
-            /*int skillId = in.nextInt();
-            // Retrieve Skill with that skillID from Realm and add it in the list
-            RealmResults<Skill> results = realm.where(Skill.class).equalTo("id", skillId).findAll();
-            if (results.size() != 0) {
-                Skill skill = results.first();
-                //Log.d("ServiceGenerator", skill.getName());
-                list.add(skill);
-            } else {
-                Log.d("ServiceGenerator", "SKILL NOT FOUND");
-            }*/
         }
         user.setUsedProgrammingLanguages(usedProgrammingLanguages);
         in.endArray();
@@ -161,12 +149,5 @@ public class UserTypeAdapter extends TypeAdapter<User> {
             }
         }
     }
-
-
-
-
-
-
-
 
 }
