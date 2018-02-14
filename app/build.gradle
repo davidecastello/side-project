@@ -53,6 +53,9 @@ dependencies {
 
     // Lottie
     compile 'com.airbnb.android:lottie:2.3.1'
+
+    // Anko
+    compile "org.jetbrains.anko:anko:0.10.4"
 }
 repositories {
     mavenCentral()
