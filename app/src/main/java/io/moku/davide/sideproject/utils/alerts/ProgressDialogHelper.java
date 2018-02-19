@@ -32,6 +32,7 @@ import io.moku.davide.sideproject.R;
  * 3. The animation you've indicated as default
  *      - in JSON format
  *      - inside the 'assets' folder
+ * 4. The layout 'progress_dialog_helper_layout.xml'
  */
 
 public class ProgressDialogHelper {
