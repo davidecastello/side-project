@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.stfalcon.frescoimageviewer.ImageViewer;
+
+import java.util.Arrays;
+import java.util.Collections;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.moku.davide.sideproject.R;
@@ -67,7 +72,8 @@ public class ProfileActivity extends BasicSecondaryActivity {
             profilePicture.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(DisplayUserPhotoActivity.newIntent(v.getContext(), user.getId()));
+                    /*startActivity(DisplayUserPhotoActivity.newIntent(v.getContext(), user.getId()));*/
+                    new ImageViewer.Builder<>(v.getContext(), Collections.singletonList(user.getProfilePictureUrl())).show();
                 }
             });
         }
@@ -75,7 +81,8 @@ public class ProfileActivity extends BasicSecondaryActivity {
             backgroundCover.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startActivity(DisplayFullPhotoActivity.newIntent(v.getContext(), user.getBackgroundCoverUrl(), user.getName()));
+                    /*startActivity(DisplayFullPhotoActivity.newIntent(v.getContext(), user.getBackgroundCoverUrl(), user.getName()));*/
+                    new ImageViewer.Builder<>(v.getContext(), Collections.singletonList(user.getBackgroundCoverUrl())).show();
                 }
             });
         }

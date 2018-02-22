@@ -2,6 +2,10 @@ package io.moku.davide.sideproject;
 
 import android.app.Application;
 
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.imagepipeline.core.ImagePipelineConfig;
+import com.facebook.imagepipeline.decoder.SimpleProgressiveJpegConfig;
+
 import io.moku.davide.sideproject.model.User;
 import io.moku.davide.sideproject.utils.preferences.PreferencesManager;
 import io.moku.davide.sideproject.utils.realm.RealmUtils;
@@ -18,11 +22,23 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
+        setupFresco();
+
         RealmUtils.initialize(this);
         RealmUtils.loadDB(getApplicationContext());
         RealmUtils.onCreateApplication();
 
         PreferencesManager.storeLoggedUserId(this, User.getAllUsers().get(0).getId());
+    }
+
+    private void setupFresco() {
+        /*Fresco.initialize(this);*/
+        ImagePipelineConfig config = ImagePipelineConfig.newBuilder(this)
+                .setProgressiveJpegConfig(new SimpleProgressiveJpegConfig())
+                .setResizeAndRotateEnabledForNetwork(true)
+                .setDownsampleEnabled(true)
+                .build();
+        Fresco.initialize(this, config);
     }
 
     @Override

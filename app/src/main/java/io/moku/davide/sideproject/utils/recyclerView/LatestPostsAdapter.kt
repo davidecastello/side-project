@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.stfalcon.frescoimageviewer.ImageViewer
 import io.moku.davide.sideproject.R
 import io.moku.davide.sideproject.model.User
 import io.moku.davide.sideproject.profile.DisplayUserPhotoActivity
@@ -39,7 +40,10 @@ class LatestPostsAdapter(val context: Context, var posts: List<Post>) : Recycler
         post.user.loadProfilePicture(context, view?.postProfilePic)
         // listeners
         view?.postInfoLayout?.setOnClickListener { v -> v.context.startActivity(ProfileActivity.newIntent(v.context, post.user.id)) }
-        view?.postPhoto?.setOnClickListener { v -> v.context.startActivity(DisplayFullPhotoActivity.newIntent(v.context, post.photoUrl)) }
+        view?.postPhoto?.setOnClickListener { v ->
+            /*v.context.startActivity(DisplayFullPhotoActivity.newIntent(v.context, post.photoUrl)) */
+            ImageViewer.Builder(v.context, listOf(post.photoUrl)).show()
+        }
         view?.postLikeButton?.setOnClickListener({
             post.likes++
             view.postLikes?.text = post.getLikesString(view.context)
